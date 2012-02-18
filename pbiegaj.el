@@ -41,6 +41,7 @@
   '(progn
      (add-hook 'ruby-mode-hook 'flymake-ruby-load)))
 
+
 ;;;; spiffy-mode provides a few utilities
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
 ;; (setq spiffy-enable-minor-mode t)
