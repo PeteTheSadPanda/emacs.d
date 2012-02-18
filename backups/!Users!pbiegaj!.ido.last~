@@ -1,0 +1,394 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/admin/" . "management/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/cloaking/" . "recipes/")
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/" . "admin/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/node/" . "recipes/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/buynet/" . "recipes/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/ssl_requirement-0.1.0/" . "lib/")
+ ("/usr/local/Library/" . "Formula/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/models/ssl/" . "certs/")
+ ("/Users/pbiegaj/projects/frontend/apps/auth/js/" . "models/")
+ ("/Users/pbiegaj/projects/frontend/apps/" . "auth/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/reports/" . "salesforce/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/redis_notifications/" . "recipes/")
+ ("/Users/pbiegaj/projects/deltoid_delta/vendor/deltoid_daemon/" . "libexec/")
+ ("/Users/pbiegaj/projects/deltoid_delta/vendor/" . "deltoid_daemon/")
+ ("/Users/pbiegaj/projects/deltoid_delta/" . "vendor/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/marketing/templates/" . "default/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/marketing/" . "templates/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/railmail/app/" . "models/")
+ ("/Users/pbiegaj/projects/satisfaction/public/frontend/" . "apps/")
+ ("/Users/pbiegaj/projects/satisfaction/public/frontend/apps/" . "auth/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/models/" . "collections/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/views/topic/show/" . "tags/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/views/topic/" . "show/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/views/" . "topic/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/lib/jquery/" . "plugins/")
+ ("/Users/pbiegaj/projects/jquery-postmessage/docs/" . "javascript/")
+ ("/usr/local/Cellar/mysql/5.5.12/" . "support-files/")
+ ("/usr/local/Cellar/mysql/" . "5.5.12/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/" . "gems/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/rails-2.3.5/" . "helpers/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/activesupport-2.3.5/lib/active_support/" . "testing/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/views/" . "accounts/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/" . "maps/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/" . "backends/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/logins/" . "login_provider_panels/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/acts_as_rpx/spec/lib/" . "rpx/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/acts_as_rpx/spec/" . "models/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/acts_as_rpx/" . "spec/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/acts_as_rpx/app/" . "models/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/plugins/" . "acts_as_rpx/")
+ ("/Users/pbiegaj/projects/satisfaction/vendor/" . "plugins/")
+ ("/Users/pbiegaj/projects/satisfaction/script/" . "nodejs/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@global/gems/" . "engineyard-1.3.17/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@global/" . "gems/")
+ ("/Users/pbiegaj/.rvm/rubies/ree-1.8.7-2011.03/" . "share/")
+ ("/Users/pbiegaj/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/gems/1.8/" . "gems/")
+ ("/Users/pbiegaj/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/gems/" . "1.8/")
+ ("/Users/pbiegaj/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/" . "gems/")
+ ("/Users/pbiegaj/.rvm/rubies/ree-1.8.7-2011.03/lib/" . "ruby/")
+ ("/Users/pbiegaj/.rvm/rubies/" . "ree-1.8.7-2011.03/")
+ ("/Users/pbiegaj/.rvm/" . "rubies/")
+ ("/Users/pbiegaj/projects/oauth/" . "lib/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/lib/" . "jquery/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/app/" . "common/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/" . "ssl_requirement-0.1.0/")
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/" . "app/")
+ ("/Users/pbiegaj/projects/jammit-s3/" . "lib/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/admin/management/" . "accounts/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/admin/" . "stats/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/intercluster_communication/templates/" . "default/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/intercluster_communication/" . "templates/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/main/" . "recipes/")
+ ("/Users/pbiegaj/projects/medusa/" . "bin/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/crontab/" . "recipes/")
+ ("/Users/pbiegaj/.emacs.d/" . "vendor/")
+ ("/Users/pbiegaj/projects/satisfaction_spec/app/" . "controllers/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/topics/me_toos/" . "create/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/topics/" . "me_toos/")
+ ("/Users/pbiegaj/projects/satisfaction/app/models/" . "product/")
+ ("/usr/local/etc/" . "nginx/")
+ ("/Users/pbiegaj/projects/satisfaction/public/" . "javascripts/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/" . "logins/")
+ ("/Users/pbiegaj/projects/hydra/test/" . "fixtures/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/mongrel/templates/" . "default/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/mongrel/" . "templates/")
+ ("/Users/pbiegaj/.emacs.d/vendor/" . "spiffy/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/sphinx/templates/" . "default/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/sphinx/files/" . "default/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/sphinx/" . "recipes/")
+ ("/Users/pbiegaj/projects/satisfaction/app/views/" . "layouts/")
+ ("/Users/pbiegaj/projects/support_files/" . "fastpass_testing/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/javascripts/" . "support/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/" . "controllers/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2010.02@satisfaction/gems/rr-1.0.2/lib/rr/double_definitions/" . "double_injections/")
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2010.02@satisfaction/gems/rr-1.0.2/lib/rr/" . "double_definitions/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/admin/" . "management/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/database_yml/" . "recipes/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/" . "main/")
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/" . "cookbooks/")
+ ("/Users/pbiegaj/projects/satisfaction/spec/api/" . "models/")
+ ("/Users/pbiegaj/projects/satisfaction/api/" . "controllers/")
+ ("/Users/pbiegaj/projects/satisfaction/config/" . "environments/")
+ ("/Users/pbiegaj/.rvm/gems/ruby-1.8.7-p302@satisfaction/gems/activerecord-2.3.5/lib/active_record/" . "connection_adapters/")
+ ("/Users/pbiegaj/.rvm/gems/ruby-1.8.7-p302@satisfaction/gems/" . "activerecord-2.3.5/")
+ ("/Users/pbiegaj/.rvm/gems/" . "ree-1.8.7-2011.03@satisfaction/")
+ ("/Users/pbiegaj/.rvm/gemsets/ruby/1.8.7/" . "p302/")
+ ("/Users/pbiegaj/.rvm/gemsets/ruby/" . "1.8.7/")
+ ("/Applications/MAMP/htdocs/" . "fastpass/")
+ ("/Applications/MAMP/" . "htdocs/")
+ ("/Applications/" . "MAMP/")
+ ("/usr/local/Cellar/nginx/0.8.53/" . "html/")
+ ("/usr/local/Cellar/nginx/0.8.52/html/wordpress/" . "wp-admin/")
+ ("/usr/local/Cellar/nginx/0.8.52/html/" . "wordpress/")
+ ("/usr/local/Cellar/nginx/0.8.52/" . "html/")
+ ("/usr/local/Cellar/nginx/" . "0.8.54/")
+ ("/usr/local/Cellar/" . "mysql/")
+ ("/usr/local/" . "Library/")
+ ("/Users/pbiegaj/projects/satisfaction/db/" . "seeder/")
+ ("/Users/pbiegaj/.oh-my-zsh/" . "themes/")
+ ("/Users/pbiegaj/" . "projects/")
+ ("/Users/pbiegaj/projects/satisfaction/hydra_extensions/" . "messages/")
+ ("/Users/pbiegaj/projects/satisfaction/lib/" . "tasks/")
+ ("/Users/pbiegaj/projects/satisfaction/app/" . "controllers/")
+ ("/Users/pbiegaj/projects/satisfaction/" . "config/")
+ ("/Users/pbiegaj/projects/" . "my-emacs-starter-kit/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/pbiegaj/projects/my-emacs-starter-kit/"
+ "/Users/pbiegaj/.emacs.d/"
+ "/Users/pbiegaj/projects/panda_macs/"
+ "/Users/pbiegaj/projects/satisfaction/config/"
+ "/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/maps/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/"
+ "/Users/pbiegaj/projects/satisfaction/public/javascripts/app/"
+ "/Users/pbiegaj/projects/satisfaction/app/models/"
+ "/Users/pbiegaj/projects/satisfaction/db/migrate/"
+ "/Users/pbiegaj/projects/satisfaction/spec/"
+ "/Users/pbiegaj/projects/satisfaction/db/seeder/"
+ "/Users/pbiegaj/projects/satisfaction/lib/tasks/"
+ "/Users/pbiegaj/projects/satisfaction/db/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/"
+ "/Users/pbiegaj/projects/satisfaction/config/environments/"
+ "/Users/pbiegaj/.oh-my-zsh/themes/"
+ "/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/"
+ "/Users/pbiegaj/projects/satisfaction/app/views/layouts/"
+ "/Users/pbiegaj/projects/satisfaction/app/views/admin/stats/"
+ "/Users/pbiegaj/projects/satisfaction/app/views/topics/"
+ "/Users/pbiegaj/projects/satisfaction/public/javascripts/app/topics/"
+ "/Users/pbiegaj/projects/satisfaction/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/admin/management/"
+ "/Users/pbiegaj/projects/satisfaction/spec/controllers/admin/management/"
+ "/Users/pbiegaj/projects/satisfaction/deploy/"
+ "/Users/pbiegaj/projects/satisfaction/spec/models/"
+ "/Users/pbiegaj/projects/satisfaction/spec/concerns/"
+ "/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/main/recipes/"
+ "/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/cloaking/recipes/"
+ "/Users/pbiegaj/projects/satisfaction/spec/spec_helpers/"
+ "/Users/pbiegaj/.emacs.d/vendor/spiffy/"
+ "/Users/pbiegaj/projects/satisfaction/public/javascripts/"
+ "/Users/pbiegaj/projects/satisfaction/lib/plugins/cache_improvements/lib/"
+ "/Users/pbiegaj/projects/satisfaction/lib/plugins/cache_improvements/"
+ "/Users/pbiegaj/projects/satisfaction/app/concerns/"
+ "/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/node/recipes/"
+ "/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/buynet/recipes/"
+ "/Users/pbiegaj/projects/satisfaction/spec/controllers/"
+ "/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/database_yml/recipes/"
+ "/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/ssl_requirement-0.1.0/lib/"
+ "/Users/pbiegaj/projects/satisfaction/spec/integration/mobile/"
+ "/Users/pbiegaj/projects/satisfaction/public/"
+ "/usr/local/Library/Formula/"
+ "/Users/pbiegaj/projects/satisfaction/script/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/topics/"
+ "/Users/pbiegaj/projects/satisfaction/script/db/geck_sql_dump_files/"
+ "/Users/pbiegaj/projects/satisfaction/script/db/"
+ "/Users/pbiegaj/projects/satisfaction/api/controllers/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/topics/"
+ "/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/topics/bulk_actions/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "custom.el"
+ "pbiegaj.el"
+ "COPYING"
+ "README.markdown"
+ "init.el"
+ "custom-ruby.el"
+ "nginx.conf"
+ "show.html.haml"
+ "maps_controller.rb"
+ "admin_map.js"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/pbiegaj/projects/my-emacs-starter-kit/" (20286 40846) "vendor/" "update.sh" "TODO" "starter-kit-ruby.el" "starter-kit-registers.el" "starter-kit-perl.el" "starter-kit-misc.el" "starter-kit-lisp.el" "starter-kit-js.el" "starter-kit-eshell.el" "starter-kit-elpa.el" "starter-kit-defuns.el" "starter-kit-bindings.el" "snippets/" "sam.el" "README.markdown" "pbiegaj.el" "pair.el" "package.el" "init.el" "elpa-to-submit/" "elpa/" "dominating-file.el" "custom.el" "custom-ruby.el" "custom-color-compilation.el" "COPYING" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/pbiegaj/.emacs.d/" (20286 40846) "places" "pbiegaj.el" "init.el~" "init.el" "elpa/" "backups/" "auto-save-list/" ".smex-items" "../" "./")
+
+ ("/Users/pbiegaj/" (20286 40846) "Wallpaper/" "trim_backup/" "Public/" "projects/" "Pictures/" "Music/" "Movies/" "Library/" "joystick art/" "Images/" "Downloads/" "Documents/" "Desktop/" "Album Artwork/" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump" ".Xcode/" ".vimrc" ".viminfo" ".vim-fuf-data/" ".vim/" ".Trash/" ".subversion/" ".ssh/" ".shsh/" ".sh_history" ".sfn_struct.sql" ".rvm/" ".ri/" ".rediscli_history" ".recentf" ".rdebugrc" ".rdebug_hist" ".profile" ".pairs" ".oh-my-zsh/" ".npm/" ".netbeans/" ".nbprofiler/" ".mysql_history" ".lesshst" ".irb_history" ".irb-history" ".ido.last" ".htoprc" ".gitconfig" ".gemrc" ".gem/" ".gdb_history" ".fonts/" ".fontconfig/" ".eyrc-stage" ".eyrc-production" ".eyrc-prod" ".eyrc-demo" ".eyrc" ".eshell/" ".emacs~" ".emacs.d/" ".emacs.bmk" ".DS_Store" ".cups/" ".csshrc" ".config/" ".CFUserTextEncoding" ".bashrc" ".bash_history" "../" "./")
+
+ ("/Users/pbiegaj/projects/" (20286 40513) "tools/" "TheFlash/" "test_sat/" "solarized_lion_terminal/" "smlTraining/" "satisfaction/" "ruby-satisfaction/" "my-emacs-starter-kit/" "medusa/" "magellan/" "life_boat/" "jammit-s3/" "homebrew/" "haml-js/" "HackDay/" "git_scripts/" "getsat.widget/" "frontend/" "fine_volume/" "ey-cloud-recipes/" "emacs-starter-kit/" "elisp_learnings/" "deltoid_delta/" ".DS_Store" "../" "./")
+
+ ("/Users/pbiegaj/projects/panda_macs/" (20286 39790) "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/config/" (20285 61781) "windows_live.yml" "unicorn.rb" "test.sphinx.conf" "ssl/" "sphinx.yml" "sphinx.sample.yml" "salesforce.yml" "rpx.yml" "routes.rb" "requires.rb" "redis.yml.bak" "preinitializer.rb" "nginx.marketing.conf.erb" "nginx.marketing.conf" "nginx.conf_old" "nginx.conf.erb" "nginx.conf" "mongodb.example.yml" "memcached.example.yml" "marketing.conf" "locales/" "java.policy" "initializers/" "i18n-js.yml" "google_map.yml" "google_apps_marketplace/" "good_data.yml" "gateways.yml" "flickr.yml" "environments/" "environment.rb" "development.sphinx.conf" "deploy.rb" "database.yml" "database.example.yml" "boot.rb" "assets.yml" "app_routes.rb" "api_routes.rb" "amazon_s3.yml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/" (20285 61780) "vendor/" "tmp/" "Thorfile" "spec_fast/" "spec/" "script/" "Rakefile" "public/" "log/" "lib/" "gronkowski/" "Gemfile.lock" "Gemfile" "flash/" "fastpass-libs/" "deploy/" "db/" "config/" "Capfile" "CACHE_REVISION" "app/" "api/" ".rvmrc" ".pairs" ".gitmodules" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/maps/" (20285 21693) "show.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/" (20285 31024) "zendesks_controller.rb" "widgets_controller.rb" "user_defined_codes_controller.rb" "topics_controller.rb" "topics/" "stats_controller.rb" "products_controller.rb" "products/" "paratures_controller.rb" "overhearers_controller.rb" "member_suspension_contact_email_controller.rb" "maps_controller.rb" "logins_controller.rb" "integrations_controller.rb" "good_data_controller.rb" "fastpasses_controller.rb" "email_domains_controller.rb" "customizations_controller.rb" "cname_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/db/migrate/" (20285 25438) "20120216201131_add_home_location_to_user.rb" "20120215191244_add_geo_to_topic_and_replies.rb" "20120126221819_facebook_basic_to_premium.rb" "20120120182249_add_has_ssl_on_company.rb" "20120118021002_add_plans_and_migrate_accounts.rb" "20120112012946_plan_index_on_accounts.rb" "20120110214623_create_get_sat_billing_partner.rb" "20120104212860_destroy_attachment_fu_remnants.rb" "20120104212859_go_one_hundred_percent_paperclip.rb" "20120104212858_the_original_paperclip.rb" "20120103204701_previous_and_current_plans.rb" "20111229142147_add_active_replies_to_topic.rb" "20111223000820_add_paperclip_staging_columns_indices_and_triggers.rb" "20111223000819_create_paperclip_data_needs_updating.rb" "20111221003515_add_company_active_ssl_proxy.rb" "20111212235505_add_chargify_product.rb" "20111123213109_company_ssl_certificates.rb" "20111108064842_remove_company_source.rb" "20111004191106_create_account_change_events.rb" "20111003233955_add_chargify_fields_to_account_transactions.rb" "20110930174128_add_account_uuid_and_subscription_id_to_account.rb" "20110927185951_account_billing_interval.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/db/" (20284 51822) "unique_columns.yml" "stopwords.txt" "sphinx/" "snapshots/" "seeds.rb" "seeder/" "schema.rb" "migrate/" "development_structure.sql" "archived_migrations/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/app/" (20285 24425) "udc.js" "topics/" "topic.js" "tag_submission.js" "tag.js" "super_admin.js" "start_topic_box.js" "share_topic_widget.js" "sfn_widget_text_editor.js" "sfn_widget_style_picker.js" "sfn_widget_sidebar.js" "sfn_widget_product_picker.js" "sfn_widget_overlay.js" "sfn_widget.js" "sfn_jquery_setup.js" "sfn_form_validator.js" "sfn_data_remote.js" "secure_inline_login.js" "search.js" "reply_entry.js" "reply_edit.js" "replies.js" "prompted_field.js" "promoted_replies.js" "page.js" "notifiers.js" "mixpanel.js" "mini_profile.js" "mee_too.js" "links.js" "link_shortener_widget.js" "inline_login.js" "global.js" "feedback_base.js" "ext/" "error_report.js" "employee_tools.js" "emotion_picker.js" "deprecated_utils.js" "cookie.js" "comments.js" "comment_submission.js" "comment_edit.js" "admin_map.js" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/lib/tasks/" (20284 49082) "users.rake" "twitter.rake" "topics.rake" "tags.rake" "stats.rake" "ssltest.rake" "snapshots.rake" "satisfaction.rake" "salesforce.rake" "rspec.rake" "resque.rake" "reports.rake" "replies.rake" "products.rake" "plans.rake" "mongo.rake" "memberships.rake" "maintenance.rake" "logins.rake" "jasmine.rake" "identities.rake" "i18n.rake" "google.rake" "good_data.rake" "flags.rake" "feedback.rake" "fastpass_libs.rake" "emails.rake" "digests.rake" "development.rake" "db.rake" "customization.rake" "custom_specs.rake" "cruise.rake" "convert_notifiers.rake" "company_metrics.rake" "companies.rake" "chargify.rake" "capistrano.rake" "cache.rake" "bundle.rake" "bootstrap.rake" "assets.rake" "adhoc.rake" "accounts.rake" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/db/seeder/" (20284 49062) "truncator.rb" "seeder.rb" "counter.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/script/" (20284 11111) "worker" "update_primary_indexes.sh" "update_delta_indexes.sh" "unanswered_monitor" "tracker_release_manager.rb" "test" "stats_engine.sh" "stats/" "start-resque-worker" "spec_server" "spec" "server" "satisfaction.erb" "satisfaction" "runner" "resque-web" "resque-scheduler" "radar" "process/" "plugin" "performance/" "per_company_active_users.rb" "overheard_offenders.rb" "oink" "oauth_buddy.rb" "nodejs/" "nginx_launcher" "netsniff.js" "myprivateip" "memcached_ctl" "job_server" "generate_known_hosts.rb" "generate" "gdata_talker/" "employee_report.rb" "destroy" "deploy_cloud" "delayed_job" "dbconsole" "dbcharmerize_database_yml.rb" "db/" "data_files/" "console" "cloudkick_plugins/" "ci_spec_runner.sh" "breakpointer" "autospec" "api" "about" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/integration/mobile/" (20284 1845) "supported_browsers_spec.rb" "routing_spec.rb" "restrict_to_english_communities_only_spec.rb" "force_full_site_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/" (20284 11111) "topics_controller_spec.rb" "topics/" "tiny_urls_controller_spec.rb" "stars_controller_spec.rb" "searches_controller_spec.rb" "routing_spec.rb" "routes/" "reroute_controller_spec.rb" "products/" "people_controller_spec.rb" "people/" "password_resets_controller_spec.rb" "notifiers_controller_spec.rb" "networks_controller_spec.rb" "networks/" "me_controller_spec.rb" "logins_controller_spec.rb" "javascripts_controller_spec.rb" "inline_images_controller_spec.rb" "in_company_controller_spec.rb" "google_companies_controller_spec.rb" "google_apps_marketplace_controller_spec.rb" "feedback_topics_controller_spec.rb" "fastpasses_controller_spec.rb" "company_picks_controller_spec.rb" "companies_controller_spec.rb" "companies/" "cname_spec.rb" "billing_auth_controller_spec.rb" "auth_launcher_controller_spec.rb" "auth_controller_spec.rb" "application_controller_spec.rb" "admin/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/concerns/" (20284 11111) "topic_list_actions.rb" "tiny_urls.rb" "tag_helpers.rb" "propriety.rb" "product_data.rb" "pager_helpers.rb" "normalization.rb" "nestings.rb" "mobile/" "in_company_concern.rb" "has_net_promoter_score.rb" "has_emotion.rb" "errors.rb" "ensure_ssl.rb" "ensure_admin_section_access.rb" "encrypted_cookies.rb" "community_overview.rb" "authorizable.rb" "authentication.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/spec_helpers/" (20284 7728) "view_spec_helper.rb" "view_shared_behaviors.rb" "sphinx_spec_helper.rb" "salesforce_spec_helper.rb" "s3_upload_spec_helper.rb" "routes_spec_helper.rb" "mongodb_spec_helper.rb" "matchers/" "integration_spec_helper.rb" "google_analytics_spec_helper.rb" "controller_spec_helper.rb" "controller_shared_behaviors.rb" "base_spec_helper.rb" "authorization_spec_helper.rb" "account_spec_helper.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/concerns/" (20284 11111) "propriety_spec.rb" "normalization_spec.rb" "mobile/" "in_company_concern_spec.rb" "has_emotion_spec.rb" "errors_spec.rb" "ensure_ssl_spec.rb" "authorizable_spec.rb" "authentication_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/models/" (20284 11111) "zendesker_spec.rb" "user_spec.rb" "user/" "uploaded_image_spec.rb" "unanswered_monitor_spec.rb" "twitter_replier_spec.rb" "topic_spec.rb" "topic_product_spec.rb" "topic_participation_spec.rb" "topic/" "tiny_url_spec.rb" "tagging_spec.rb" "tag_spec.rb" "tag/" "system_config_spec.rb" "stats_engine_spec.rb" "star_spec.rb" "spam_alert_mailer_spec.rb" "salesforce/" "s3_image_spec.rb" "reply_spec.rb" "reply/" "remote_topic_mapping_spec.rb" "remote_topic_mapping_attribute_spec.rb" "profanity_filter_spec.rb" "product_spec.rb" "product_membership_spec.rb" "product/" "plan_spec.rb" "password_mailer_spec.rb" "partner_spec.rb" "overhearer_spec.rb" "overhearer/" "notifier_spec.rb" "notification_mailer_spec.rb" "nonce_spec.rb" "network_spec.rb" "network_membership_spec.rb" "net_promoter_score_spec.rb" "membership_spec.rb" "marketo/" "login_token_spec.rb" "link_spec.rb" "integration_topic_log_spec.rb" "integration_spec.rb" "integration/" "google_report_spec.rb" "good_data/" "following_spec.rb" "flag_spec.rb" "feedback_mailer_spec.rb" "featured_person_spec.rb" "fastpass_spec.rb" "fastpass_identity_spec.rb" "employee_invite_spec.rb" "emotitag_spec.rb" "email_spec.rb" "email_domain_spec.rb" "dispute_mailer_spec.rb" "digester_spec.rb" "digest_mailer_spec.rb" "customization_spec.rb" "contact_spec.rb" "company_visitor_spec.rb" "company_ssl_certificate_spec.rb" "company_spec.rb" "company_relationship_spec.rb" "company_product_spec.rb" "company/" "change_mailer_spec.rb" "blip_spec.rb" "billing_period_spec.rb" "authorization_token_spec.rb" "api/" "account_transaction_spec.rb" "account_spec.rb" "account_change_event_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/deploy/" (20284 11111) "before_symlink.rb" "before_restart.rb" "after_restart.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/admin/management/" (20284 11115) "reports_controller_spec.rb" "people_controller_spec.rb" "ips_controller_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/models/" (20284 19880) "zendesker.rb" "zendesk_ticket.rb" "zendesk_credential.rb" "vote.rb" "vip_mailer.rb" "users/" "user_mailer.rb" "user_defined_code.rb" "user.rb" "user/" "uploaded_images/" "uploaded_image.rb" "unanswered_monitor.rb" "twitter_replier.rb" "topic_user_defined_code.rb" "topic_search_request.rb" "topic_product.rb" "topic_participation.rb" "topic_callbacks.rb" "topic.rb" "topic/" "tiny_url.rb" "time_series.rb" "TAGS" "tagging.rb" "tag.rb" "tag/" "system_config.rb" "stats_engine.rb" "stats_engine/" "star.rb" "sphinx_search_request.rb" "spam_alert_mailer.rb" "share_mailer.rb" "saved_form.rb" "salesforce/" "s3_image.rb" "revision.rb" "report_mailer.rb" "reply_callbacks.rb" "reply.rb" "reply/" "remote_topic_mapping_attribute.rb" "remote_topic_mapping.rb" "profanity_filter.rb" "product_search_request.rb" "product_membership.rb" "product.rb" "product/" "private_field.rb" "plan_category.rb" "plan.rb" "password_mailer.rb" "partner.rb" "parature_ticket.rb" "parature_talker.rb" "overhearer.rb" "overhearer/" "notifier.rb" "notification_mailer.rb" "note.rb" "nonce.rb" "network_membership.rb" "network_logo.rb" "network_diagram.rb" "network.rb" "net_promoter_score.rb" "membership_search_request.rb" "membership.rb" "marketo/" "login_token.rb" "link.rb" "line_item.rb" "invitations/" "invitation_mailer.rb" "invitation_group.rb" "invitation.rb" "integration_topic_log.rb" "integration.rb" "integration/" "indexed_membership.rb" "google_report.rb" "good_data/" "following.rb" "following/" "flag.rb" "feedback_mailer.rb" "featured_person.rb" "fastpass_identity.rb" "fastpass.rb" "facebook.rb" "employee_invite.rb" "emotitag.rb" "email_domain.rb" "email.rb" "domain_mapper.rb" "dispute_mailer.rb" "digester.rb" "digest_mailer.rb" "data_series.rb" "customized_email.rb" "customization.rb" "contact_digest_mailer.rb" "contact.rb" "contact/" "company_visitor.rb" "company_ssl_certificate.rb" "company_search_request.rb" "company_relationship.rb" "company_product.rb" "company_pick.rb" "company_mailer.rb" "company.rb" "company/" "chargify_product.rb" "change_mailer.rb" "champion_badge.rb" "business_goal.rb" "blip.rb" "billing_period.rb" "banned_ip.rb" "authorization_token_mailer.rb" "authorization_token.rb" "auth_mailer.rb" "application_mailer.rb" "api/" "action_meta_information.rb" "account_transaction.rb" "account_change_event.rb" "account.rb" "account/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/admin/management/" (20284 10830) "vip_watches_controller.rb" "system_configs_controller.rb" "ssl_proxy_tools_controller.rb" "reports_controller.rb" "products_controller.rb" "people_controller.rb" "companies_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/topics/" (20284 12488) "zendesk_tickets/" "votes/" "update_following_widgets.js.rjs" "titles/" "show_removed.html.haml" "show.html.haml" "show/" "replies/" "removals/" "redirections/" "parature_tickets/" "new.html.haml" "new/" "moves/" "merges/" "me_toos/" "index.html.haml" "employee_tools/" "emails/" "edit.html.haml" "deprecations/" "company_status/" "closings/" "changes/" "browser.html.haml" "_vote_summary.html.haml" "_udc_sidebar.html.haml" "_topic_subject.html.haml" "_topic_list_filters.html.haml" "_topic_li.html.haml" "_start_topic_box.html.haml" "_starred_from_email.html.haml" "_sponsored_center.html.haml" "_sidebar_other_network_topics.html.haml" "_sharing.html.haml" "_reply_pagination_hack.html.haml" "_reply_entry_form.html.haml" "_reply_edit_form.html.haml" "_removed.html.haml" "_redirected.html.haml" "_recent_topic.html.haml" "_promoted_reply.html.haml" "_promoted_replies.html.haml" "_overheard_topic_flash_message.html.haml" "_network_participant.html.haml" "_moderator_sidebar.html.haml" "_merged.html.haml" "_index_content.html.haml" "_from_live_search.html.haml" "_form.html.haml" "_follow_status.html.haml" "_emotitagger.html.haml" "_edit.html.haml" "_deprecated_and_redirected.html.haml" "_deprecated.html.haml" "_creator_info.html.haml" "_comment_list.html.haml" "_comment_entry_form.html.haml" "_comment_edit_form.html.haml" "_browser_content.html.haml" "_blip.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/layouts/" (20284 23142) "widget.html.haml" "people.html.haml" "network.html.haml" "marketing.html.haml" "main_home.html.haml" "login.html.haml" "login/" "headers/" "feedback.html.haml" "employee_tools.html.haml" "developers.html.haml" "content.html.haml" "company_admin_login.html.haml" "company_admin.html.haml" "company.rss.haml" "company.html.haml" "application.rss.haml" "application.js.erb" "application.html.haml" "_widget_frame.html.haml" "_sidebar.html.haml" "_products_header.html.haml" "_mini_modal.html.haml" "_home_header.html.haml" "_home.html.haml" "_footer.html.haml" "_fastpass_referrer.html.haml" "_empty_frame.html.haml" "_email_verification_warning.html.haml" "_companies_header.html.haml" "_basic_frame.html.haml" "_action_nav.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/.oh-my-zsh/themes/" (20284 34600) "xiong-chiamiov.zsh-theme" "xiong-chiamiov-plus.zsh-theme" "wezm.zsh-theme" "wezm+.zsh-theme" "wedisagree.zsh-theme" "trapd00r.zsh-theme" "tonotdo.zsh-theme" "tjkirch.zsh-theme" "theunraveler.zsh-theme" "terminalparty.zsh-theme" "takashiyoshida.zsh-theme" "superjarin.zsh-theme" "sunrise.zsh-theme" "sunaku.zsh-theme" "steeef.zsh-theme" "sporty_256.zsh-theme" "sorin.zsh-theme" "Soliah.zsh-theme" "smt.zsh-theme" "skaro.zsh-theme" "simple.zsh-theme" "robbyrussell.zsh-theme" "rixius.zsh-theme" "risto.zsh-theme" "rgm.zsh-theme" "re5et.zsh-theme" "pmcgee.zsh-theme" "philips.zsh-theme" "panda.zsh-theme" "obraun.zsh-theme" "nicoulaj.zsh-theme" "nebirhos.zsh-theme" "nanotech.zsh-theme" "muse.zsh-theme" "murilasso.zsh-theme" "mrtazz.zsh-theme" "minimal.zsh-theme" "miloshadzic.zsh-theme" "mikeh.zsh-theme" "mgutz.zsh-theme" "maran.zsh-theme" "macovsky.zsh-theme" "macovsky-ruby.zsh-theme" "lukerandall.zsh-theme" "linuxonly" "lambda.zsh-theme" "kphoen.zsh-theme" "kolo.zsh-theme" "kennethreitz.zsh-theme" "kardan.zsh-theme" "juanghurtado.zsh-theme" "jtriley.zsh-theme" "jreese.zsh-theme" "josh.zsh-theme" "jonathan.zsh-theme" "jnrowe.zsh-theme" "jispwoso.zsh-theme" "jbergantine.zsh-theme" "imajes.zsh-theme" "humza.zsh-theme" "gozilla.zsh-theme" "geoffgarside.zsh-theme" "gentoo.zsh-theme" "garyblessington.zsh-theme" "gallois.zsh-theme" "gallifrey.zsh-theme" "fwalch.zsh-theme" "funky.zsh-theme" "frisk.zsh-theme" "fletcherm.zsh-theme" "flazz.zsh-theme" "fishy.zsh-theme" "example.zsh-theme" "evan.zsh-theme" "edvardm.zsh-theme" "eastwood.zsh-theme" "duellj.zsh-theme" "dstufft.zsh-theme" "dst.zsh-theme" "dpoggi.zsh-theme" "dogenpunk.zsh-theme" "dieter.zsh-theme" "daveverwer.zsh-theme" "darkblood.zsh-theme" "dallas.zsh-theme" "cypher.zsh-theme" "cloud.zsh-theme" "clean.zsh-theme" "candy.zsh-theme" "blinks.zsh-theme" "bira.zsh-theme" "awesomepanda.zsh-theme" "aussiegeek.zsh-theme" "arrow.zsh-theme" "alanpeabody.zsh-theme" "afowler.zsh-theme" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/" (20284 40704) "translations_controller.rb" "topics_controller.rb" "topics/" "tiny_urls_controller.rb" "stylesheets_controller.rb" "stars_controller.rb" "sponsored_picks_controller.rb" "sessions_controller.rb" "searches_controller.rb" "scores_controller.rb" "reroute_controller.rb" "redirect_controller.rb" "products_controller.rb" "products/" "people_controller.rb" "people/" "password_resets_controller.rb" "partners_controller.rb" "notifiers_controller.rb" "networks_controller.rb" "networks/" "net_promoter_scores_controller.rb" "me_controller.rb" "marketing_controller.rb" "logins_controller.rb" "javascripts_controller.rb" "inline_images_controller.rb" "in_company_controller.rb" "home_controller.rb" "google_companies_controller.rb" "google_apps_marketplace_controller.rb" "fastpasses_controller.rb" "developers_controller.rb" "content_controller.rb" "company_picks_controller.rb" "companies_controller.rb" "companies/" "billing_auth_controller.rb" "auth_launcher_controller.rb" "auth_controller.rb" "application_controller.rb" "api_controller.rb" "api/" "admin_controller.rb" "admin/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/lib/" (20284 23760) "web_bug.rb" "unduplicator.rb" "truthy_and_falsey.rb" "token_verification.rb" "thinking_sphinx_ext.rb" "tasks/" "string_ext.rb" "ssl_proxy.rb" "smartling.rb" "signover_test_server/" "rpx_callbacks.rb" "resque_ext.rb" "resque_ext/" "rails_ext.rb" "rails_ext/" "rack/" "prompted_builder.rb" "plugins/" "password.rb" "paperclip_ext.rb" "oauth/" "null_store.rb" "notification_dispatcher.rb" "notification_authorization.rb" "model_without_database.rb" "i18n_tools.rb" "hpricot_ext.rb" "hodel3000.rb" "hash_ext.rb" "haml_ext.rb" "gzip_filter.rb" "gscrypt.rb" "gdata_handler.rb" "footnotes.rb" "following_v2.rb" "enumerable_ext.rb" "db_importer.rb" "constants.rb" "company_validator.rb" "company_nesting.rb" "chargify/" "capistrano/" "authorization.rb" "author_membership.rb" "attachment.rb" "array_ext.rb" "acts_as_taggable.rb" "active_record_ext.rb" "action_view_ext.rb" "action_mailer_ext.rb" "action_controller_ext.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/config/environments/" (20284 39789) "test.rb" "staging_strongbox_keypair.pem" "staging.rb" "slave_lb.rb" "slave.rb" "sandbox.rb" "qa.rb" "production_strongbox_keypair.pem" "production.rb" "dr1.rb" "development.rb" "demo_strongbox_keypair.pem" "demo.rb" "default_strongbox_keypair.pem" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/" (20284 32368) "zendesks/" "widgets/" "user_defined_codes/" "topics/" "tools.html.haml" "stats/" "roles.html.haml" "profanity.html.haml" "products.html.haml" "products/" "paratures/" "maps/" "logins/" "login_options.html.haml" "integrations/" "index.html.haml" "good_data/" "fastpasses/" "email_domains/" "details_form/" "details.html.haml" "customizations/" "cname/" "_verify_email_domain.html.haml" "_roles_form.html.haml" "_role.html.haml" "_pending_employee_invites.html.haml" "_navigation.html.haml" "_help_widget.html.haml" "_getting_started_step.html.haml" "_employee_websites.html.haml" "_details_form.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/admin/stats/" (20284 21231) "show.html.haml" "edit.html.haml" "_trending.html.haml" "_title.html.haml" "_stats_bar.html.haml" "_stat_group.html.haml" "_gd_promo_banner.html.haml" "_filters.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/companies/" (20284 7728) "updates_controller.rb" "tips_controller.rb" "tags_controller.rb" "support_channels_controller.rb" "scores_controller.rb" "questions_controller.rb" "profanity_controller.rb" "products_controller.rb" "problems_controller.rb" "praise_controller.rb" "people_controller.rb" "logos_controller.rb" "logins_controller.rb" "ideas_controller.rb" "feedback_controller.rb" "feedback/" "employee_invites_controller.rb" "customers_controller.rb" "claim_requests_controller.rb" "changes_controller.rb" "admin_controller.rb" "admin/" "activities_controller.rb" "accounts_controller.rb" "accounts/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/companies/" (20284 7728) "tags/" "support_channels/" "ssltest.html.haml" "show.js.rjs" "show.html.haml" "search.html.haml" "scores/" "products/" "people/" "overview/" "overheard.html.haml" "logos/" "logins/" "index.move_search.rjs" "index.html.haml" "feedback/" "featured_people/" "employee_invites/" "disabled_overheard.html.haml" "customers/" "congratulations/" "company_closed.html.haml" "claim_requests/" "changes/" "admin/" "accounts/" "about.html.haml" "_welcome_topic_content.html.haml" "_welcome_topic.html.haml" "_support_channels.html.haml" "_sidebar_popular_products.html.haml" "_sidebar_new_members.html.haml" "_sidebar_membership_form.html.haml" "_sidebar_member_actions.html.haml" "_sidebar_featured_members.html.haml" "_sidebar_company_product_li.html.haml" "_sidebar_community_setup.html.haml" "_sidebar_community_info.html.haml" "_sidebar_ccpact.html.haml" "_search_results.html.haml" "_recent_topics.html.haml" "_overheard_blip_rss.html.haml" "_overheard_blip.html.haml" "_new_sidebar_points.html.haml" "_light_customization.html.haml" "_header_search_results.html.haml" "_facebook_likebox.html.haml" "_content.move_search.haml" "_company_update.html.haml" "_company_tabs.html.haml" "_company_signup_header.html.haml" "_company_select_search_results.html.haml" "_company_li.html.haml" "_company_deprecated.html.haml" "_community_topics.html.haml" "_community_participation.html.haml" "_community_overheard.html.haml" "_community_description.html.haml" "_community_banner.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/admin/stats/" (20238 4031) "companies_added.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/admin/management/" (20284 7728) "vip_watches/" "system_configs/" "ssl_proxy_tools/" "reports/" "products/" "people/" "companies/" "_nav_tabs.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/admin/" (20284 7728) "stats/" "show.html.haml" "partners/" "notes/" "management/" "ips/" "../" "./")
+
+ ("/Users/pbiegaj/.oh-my-zsh/" (20091 46417) "tools/" "themes/" "templates/" "README.textile" "plugins/" "oh-my-zsh.sh" "log/" "lib/" "custom/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/app/topics/" (20284 17705) "show.js" "show/" "moderator_sidebar.js" "form.js" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/" (20284 7728) "vip_mailer/" "user_mailer/" "translations/" "topics/" "templates/" "stylesheets/" "spam_alert_mailer/" "share_mailer/" "searches/" "scores/" "redirect/" "products/" "people/" "password_resets/" "password_mailer/" "partners/" "notification_mailer/" "networks/" "memberships/" "marketing/" "logins/" "layouts/" "javascripts/" "invitation_mailer/" "home/" "hacks/" "google_companies/" "feedback_mailer/" "fastpasses/" "error_report_mailer/" "dispute_mailer/" "digest_mailer/" "developers/" "content/" "contact_digest_mailer/" "company_metrics_mailer/" "company_mailer/" "companies/" "common/" "change_mailer/" "authorization_token_mailer/" "auth_mailer/" "api/" "admin/" "accounts/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/public/" (20284 11111) "widget/" "TAGS" "stylesheets/" "ssl_test.html" "some.html" "robots-web" "robots-api" "partners/" "new_topic_picker.html" "maintenance.html" "js/" "javascripts/" "images/" "gstrac.js" "frontend/" "flash/" "favicon.png" "favicon.ico" "favicon.gif" "fastpass/" "empty.html" "charts.swf" "charts/" "bookie.css" "assets/" "502.html" "500.html" "404.html" ".htpasswd" ".htaccess" ".DS_Store" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/admin/" (20284 7728) "partners_controller.rb" "notes_controller.rb" "memberships_controller.rb" "management/" "ips_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/admin/" (20284 7728) "partners_controller_spec.rb" "memberships_controller_spec.rb" "management/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/" (20284 7728) "views/" "vcr_cassettes/" "spec_suite.rb" "spec_helpers/" "spec_helper.rb" "spec_fast_helper.rb" "spec.opts" "search/" "script/" "reports/" "rcov.opts" "models/" "lib/" "javascripts/" "integration/" "helpers/" "fixtures/" "fake_web_whitelist.rb" "factories.rb" "controllers/" "concerns/" "api_suite.rb" "api/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/" (20284 7728) "views/" "sweepers/" "stylesheets/" "reports/" "models/" "javascripts/" "helpers/" "errors/" "domain/" "controllers/" "concerns/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/authorization_token_mailer/" (20276 39192) "inline_reset_password_token.text.plain.erb" "inline_reset_password_token.text.html.haml" "inline_login_token.text.plain.erb" "inline_login_token.text.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/people/" (20279 4967) "privacy_settings_controller_spec.rb" "personal_urls_controller_spec.rb" "passwords_controller_spec.rb" "memberships_controller_spec.rb" "identities_controller_spec.rb" "followed_controller_spec.rb" "extensions_controller_spec.rb" "emails_controller_spec.rb" "digesters_controller_spec.rb" "dashboard_controller_spec.rb" "base_controller_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/people/" (20279 4967) "syncers_controller.rb" "private_fields_controller.rb" "privacy_settings_controller.rb" "personal_urls_controller.rb" "passwords_controller.rb" "notifications_controller.rb" "nesting.rb" "memberships_controller.rb" "invitations_controller.rb" "identities_controller.rb" "followed_controller.rb" "extensions_controller.rb" "emails_controller.rb" "digesters_controller.rb" "contacts_controller.rb" "companies_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/helpers/" (20283 65239) "widgets_helper.rb" "translations_helper.rb" "topics_helper.rb" "topics/" "topic_list_helper.rb" "tiny_urls_helper.rb" "text_helper.rb" "tags_helper.rb" "stylesheets_helper.rb" "style_helper.rb" "stars_helper.rb" "sponsored_picks_helper.rb" "searches_helper.rb" "scores_helper.rb" "rjs_helper.rb" "products_helper.rb" "products/" "plans_helper.rb" "people_helper.rb" "people/" "path_and_asset_helper.rb" "password_resets_helper.rb" "pagination_helper.rb" "notifiers_helper.rb" "networks_helper.rb" "net_promoter_scores_helper.rb" "moderator_flagged_replies_helper.rb" "marketing_helper.rb" "mailer_helper.rb" "logins_helper.rb" "link_helper.rb" "layouts_helper.rb" "javascripts_helper.rb" "inline_images_helper.rb" "home_helper.rb" "google_analytics_helper.rb" "form_helper.rb" "followable_helper.rb" "fastpasses_helper.rb" "email_domains_helper.rb" "email_confirmations_helper.rb" "content_helper.rb" "company_picks_helper.rb" "companies_helper.rb" "companies/" "changes_helper.rb" "breadcrumb_helper.rb" "application_helper.rb" "api_helper.rb" "admin_helper.rb" "admin/" "accounts_helper.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/companies/admin/" (20283 65239) "zendesks_controller_spec.rb" "widgets_controller_spec.rb" "user_defined_codes_controller_spec.rb" "topics_controller_spec.rb" "topics/" "stats_controller_spec.rb" "products_controller_spec.rb" "overhearers_controller_spec.rb" "member_suspension_contact_email_controller_spec.rb" "integrations_controller_spec.rb" "good_data_controller_spec.rb" "fastpasses_controller_spec.rb" "email_domains_controller_spec.rb" "customizations_controller_spec.rb" "cname_controller_spec.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/frontend/apps/auth/js/models/" (20273 43352) "unverified_email.js" "oauth.js" "login_form.js" "login.js" "fp_sign_over.js" "fp_no_account.js" "fp_existing_account_code.js" "fp_existing_account.js" "forgot_password.js" "existing_account_code.js" "existing_account.js" "create_account.js" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/models/topic/changes/" (20276 39193) "unlink.rb" "undeprecate.rb" "title.rb" "restore_reply.rb" "restore.rb" "reopen.rb" "remove_reply.rb" "remove.rb" "move.rb" "merge.rb" "link.rb" "deprecate.rb" "close.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/models/integration/" (20279 4967) "webhook.rb" "sforce.rb" "remote_resource_not_found_error.rb" "log.rb" "log/" "jira.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/models/api/" (20283 65239) "token.rb" "client.rb" "base.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/topics/bulk_actions/" (20276 39193) "removals_controller.rb" "redirections_controller.rb" "moves_controller.rb" "merges_controller.rb" "deprecations_controller.rb" "closings_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/companies/admin/topics/" (20276 39193) "user_defined_codes_controller.rb" "styles_controller.rb" "statuses_controller.rb" "bulk_actions_controller.rb" "bulk_actions/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/api/controllers/" (20283 65239) "widget_wizard_controller.rb" "widget_controller.rb" "votes_controller.rb" "validate_controller.rb" "topics_controller.rb" "topics/" "tags_controller.rb" "tags/" "stars_controller.rb" "replies_controller.rb" "replies/" "products_controller.rb" "products/" "plans_controller.rb" "people_controller.rb" "people/" "mobile_controller.rb" "mes_controller.rb" "me_toos_controller.rb" "me_nots_controller.rb" "identities_controller.rb" "home_controller.rb" "companies_controller.rb" "companies/" "comments_controller.rb" "application_controller.rb" "account_change_events_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/script/db/" (20267 7112) "transmogrify_database_table.rb" "batcher.rb" "alter_structure_topics.bash" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/controllers/topics/" (20276 39193) "zendesk_tickets_controller.rb" "votes_controller.rb" "user_defined_codes_controller.rb" "twitters_controller.rb" "titles_controller.rb" "taggings_controller.rb" "styles_controller.rb" "statuses_controller.rb" "replies_controller.rb" "replies/" "removals_controller.rb" "redirections_controller.rb" "products_controller.rb" "parature_tickets_controller.rb" "moves_controller.rb" "merges_controller.rb" "me_toos_controller.rb" "emails_controller.rb" "deprecations_controller.rb" "closings_controller.rb" "changes_controller.rb" "base_controller.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/database_yml/recipes/" (20272 28944) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/buynet/recipes/" (20247 2075) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/node/recipes/" (20265 36980) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/.emacs.d/vendor/spiffy/" (20255 24342) "spiffy.el" "spiffy-textmate-mode.el" "spiffy-textmate-mode-expectations.el" "spiffy-ruby-mode.el" "spiffy-ruby-mode-expectations.el" "spiffy-macos-mode.el" "spiffy-expectations.el" "README.markdown" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/cloaking/recipes/" (20265 37006) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/main/recipes/" (20272 28886) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/main/" (19555 30487) "recipes/" "libraries/" "definitions/" "attributes/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/common/" (20265 39275) "notifications/" "mini_profiles/" "facebox.html.haml" "_warning_banner.html.haml" "_tooltip.html.haml" "_text_editor.html.haml" "_recaptcha.html.haml" "_posting_privilege_suspension_error_message.html.haml" "_pipe.html.haml" "_paginator.html.haml" "_noscript_warning.html.haml" "_net_promoter.html.haml" "_modals.html.haml" "_mini_profile.html.haml" "_login_flow.html.haml" "_login_and_do.html.haml" "_inline_error_message.html.haml" "_history.html.haml" "_google_analytics.html.erb" "_followable_dropdown.html.haml" "_flash_clipboard.html.haml" "_feature_msg.html.haml" "_facebox.html.haml" "_errors.html.haml" "_emotitag.html.haml" "_company_metrics.html.haml" "_community_google_analytics.html.haml" "_browser_detection.html.haml" "_alpha_paginator.html.haml" "_adwords_conversion.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/main/definitions/" (20265 37053) "set_nginx_upstream_conf.rb" "restart_monit.rb" "munge_nginx_upstream_conf.rb" "ey_cloud_report.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/cloaking/" (19555 30487) "templates/" "recipes/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/" (20265 36980) "unicorn/" "ssl_proxy/" "ssl/" "sphinx/" "snmp/" "resque/" "redis_notifications/" "node/" "newrelic/" "mysql_load_balancer/" "monit/" "memcached/" "marketing/" "main/" "intercluster_communication/" "good_data/" "env.custom/" "emerge/" "delayed_job/" "database_yml/" "crontab/" "cloudkick/" "cloaking/" "ck-plugins/" "buynet/" "../" "./")
+
+ ("/usr/share/info/" (20007 53247) "woman" "widget" "viper" "vip" "uucp.info-8" "uucp.info-7" "uucp.info-6" "uucp.info-5" "uucp.info-4" "uucp.info-3" "uucp.info-2" "uucp.info-1" "uucp.info" "url" "tramp" "texinfo-3" "texinfo-2" "texinfo-1" "texinfo" "texi2html.info-3" "texi2html.info-2" "texi2html.info-1" "texi2html.info" "tar.info-2" "tar.info-1" "tar.info" "standards.info" "speedbar" "smtpmail" "sieve" "ses" "screen.info-5" "screen.info-4" "screen.info-3" "screen.info-2" "screen.info-1" "screen.info" "sc" "reftex" "rcirc" "pgg" "pcl-cvs" "org-2" "org-1" "org" "newsticker" "nasm.info-3" "nasm.info-2" "nasm.info-1" "nasm.info" "nano.info" "mh-e-2" "mh-e-1" "mh-e" "message" "make.info-2" "make.info-1" "make.info" "libtool.info-2" "libtool.info-1" "libtool.info" "info.info" "info-stnd.info" "info" "idlwave" "groff-3" "groff-2" "groff-1" "groff" "gperf.info" "gnus-5" "gnus-4" "gnus-3" "gnus-2" "gnus-1" "gnus" "forms" "flymake" "flex.info-2" "flex.info-1" "flex.info" "eudc" "eshell" "erc" "enscript.info" "emacs-mime" "emacs-8" "emacs-7" "emacs-6" "emacs-5" "emacs-4" "emacs-3" "emacs-2" "emacs-1" "emacs" "elisp-9" "elisp-8" "elisp-7" "elisp-6" "elisp-5" "elisp-4" "elisp-3" "elisp-2" "elisp-10" "elisp-1" "elisp" "eintr-3" "eintr-2" "eintr-1" "eintr" "efaq" "ediff" "ebrowse" "dired-x" "dir" "diff.info" "dc.info" "cvsclient.info" "cvs.info-2" "cvs.info-1" "cvs.info" "cl" "ccmode-1" "ccmode" "calc-6" "calc-5" "calc-4" "calc-3" "calc-2" "calc-1" "calc" "bison.info" "bc.info" "bash.info" "autotype" "automake.info-2" "automake.info-1" "automake.info" "autoconf.info" "ada-mode" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/public/javascripts/" (20238 4031) "vendor/" "sh_main.js" "lib/" "lang/" "jquery.infinite-carousel.js" "jquery-ui-1.8.2-css/" "i18n.js" "i18n/" "do_not_edit______marketo_contact_form.js" "app/" "activatables.js" "../" "./")
+
+ ("/Users/pbiegaj/.emacs.d/vendor/" (20088 52520) "spiffy/" "rvm/" "rspec-mode/" "rpm-spec-mode/" "puppet-mode/" "magit/" "liquid-mode/" "linum/" "emacs-solarized/" "el-expectations/" "cssh/" "bar-cursor/" "auto-complete-etags/" "auto-complete/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/api/" (19668 51793) "views/" "helpers/" "controllers/" "concerns/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/lib/plugins/cache_improvements/" (20247 11259) "lib/" "init.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/lib/plugins/cache_improvements/lib/" (20247 11124) "model_cache.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/node/" (20247 2181) "recipes/" "definitions/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/sphinx/" (19555 30487) "templates/" "recipes/" "files/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/sphinx/recipes/" (20247 2097) "default.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/buynet/" (19555 30487) "templates/" "recipes/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/cookbooks/database_yml/" (19555 30487) "recipes/" "../" "./")
+
+ ("/Users/pbiegaj/projects/ey-cloud-recipes/" (19979 29223) "README.md" "Rakefile" "cookbooks/" ".rvmrc" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/sweepers/" (20245 63454) "topic_sweeper.rb" "employee_sweeper.rb" "browse_sweeper.rb" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/ssl_requirement-0.1.0/lib/" (20244 25445) "ssl_requirement.rb" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/controllers/companies/" (20244 40804) "tags_controller_spec.rb" "support_channels_controller_spec.rb" "scores_controller_spec.rb" "profanity_controller_spec.rb" "products_controller_spec.rb" "people_controller_spec.rb" "logins_controller_spec.rb" "feedback/" "employee_invites_controller_spec.rb" "customers_controller_spec.rb" "claim_requests_controller_spec.rb" "admin_controller_spec.rb" "admin/" "activities_controller_spec.rb" "accounts_controller_spec.rb" "accounts/" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/ssl_requirement-0.1.0/" (20231 16377) "test/" "README" "lib/" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/gems/" (20235 19574) "yui-compressor-0.9.6/" "yajl-ruby-0.7.6/" "ya2yaml-0.29.2/" "xml-simple-1.0.14/" "wirble-0.1.3/" "will_paginate-2.3.16/" "webrat-rspec-rails-0.1.1/" "webrat-0.7.0/" "vegas-0.1.8/" "vcr-1.11.3/" "uuidtools-2.1.1/" "useragent-0.1.4/" "unicorn-3.6.2/" "tzinfo-0.3.24/" "ts-datetime-delta-1.0.2/" "treetop-1.4.8/" "tilt-1.3.3/" "thor-0.14.0/" "thinking-sphinx-1.4.0/" "term-ansicolor-1.0.5/" "SystemTimer-1.1.3/" "strongbox-0.5.0/" "ssl_requirement-0.1.0/" "spreadsheet-0.6.4.1/" "spork-0.8.4/" "sinatra-1.2.6/" "shoulda-2.10.3/" "selenium-rc-2.2.4/" "selenium-client-1.2.18/" "savon-0.8.5/" "rufus-scheduler-2.0.8/" "rubyforge-2.0.4/" "ruby-termios-0.9.6/" "ruby-ole-1.2.10/" "ruby-hmac-0.4.0/" "ruby-debug-base-0.10.3/" "ruby-debug-0.10.3/" "rspec-rails-1.3.4/" "rspec-1.3.2/" "rr-1.0.4/" "rmagick-2.8.0/" "riddle-1.2.1/" "rforce-0.6/" "rest-client-1.5.1/" "resque-scheduler-1.9.9/" "resque-retry-0.2.1/" "resque-1.19.0/" "refraction-0.1.3/" "redis-namespace-1.0.3/" "redis-2.2.1/" "recaptcha-0.2.3/" "rdoc-2.4.3/" "rake-0.9.2.2/" "rake-0.9.2/" "rails-2.3.14/" "rack-test-0.5.3/" "rack-mobile-detect-0.3.0/" "rack-1.1.2/" "POpen4-0.1.4/" "polyglot-0.3.1/" "Platform-0.4.0/" "paginator-1.1.1/" "open4-1.0.1/" "oauth-plugin-0.3.14/" "oauth-0.4.4/" "nokogiri-1.4.2/" "newrelic_rpm-3.0.1/" "mysql-2.8.1/" "multi_json-1.0.4/" "msgpack-0.4.5/" "mongrel_cluster-1.0.5/" "mongrel-1.1.5/" "mongoid-1.9.5/" "mongo-1.2.4/" "money-2.1.5/" "mofo-0.2.16/" "memcache-client-1.8.5/" "linecache-0.43/" "kgio-2.4.0/" "json_pure-1.5.1/" "json-1.4.3/" "jasmine-1.0.1.1/" "jammit-0.6.0/" "httpi-0.7.9/" "hpricot-0.8.2/" "hoptoad_notifier-2.2.2/" "hoe-2.6.2/" "hiredis-0.3.2/" "highline-1.5.2/" "haml-3.0.25/" "gzip_filter-0.2/" "gyoku-0.3.1/" "git-1.2.5/" "ghazel-daemons-1.0.13/" "gem_plugin-0.2.3/" "gabba-0.1.1/" "fastthread-1.0.7/" "fakeweb-1.3.0/" "factory_girl-1.3.1/" "facets-2.8.4/" "ezcrypto-0.7.2/" "eventmachine-0.12.10/" "engineyard-1.3.0/" "durran-validatable-2.0.1/" "diff-lcs-1.1.2/" "delayed_job-2.0.3/" "db-charmer-1.7.0/" "database_cleaner-0.5.2/" "daemons-1.1.0/" "daemon-kit-0.1.8.1/" "custom_error_message-1.0.0/" "cucumber-rails-0.3.0/" "cucumber-0.6.3/" "crack-0.1.8/" "columnize-0.3.1/" "closure-compiler-1.1.1/" "cgi_multipart_eof_fix-2.5.0/" "builder-2.1.2/" "bson_ext-1.2.4/" "bson-1.2.4/" "aws-s3-0.6.2/" "after_commit-1.0.8/" "activesupport-2.3.14/" "activeresource-2.3.14/" "activerecord-2.3.14/" "activemerchant-1.4.2/" "actionpack-2.3.14/" "actionmailer-2.3.14/" "aasm-2.0.5/" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/gems/ree-1.8.7-2011.03@satisfaction/" (20091 32896) "specifications/" "gems/" "doc/" "cache/" "bundler/" "bin/" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/gems/" (20133 35840) "ruby-1.9.2-p290@global/" "ruby-1.9.2-p290@frontend/" "ruby-1.9.2-p290/" "ruby-1.8.7-p352@global/" "ruby-1.8.7-p352/" "ree-1.8.7-2011.03@satisfaction/" "ree-1.8.7-2011.03@global/" "ree-1.8.7-2011.03@deltoid/" "ree-1.8.7-2011.03/" "cache/" "../" "./")
+
+ ("/Users/pbiegaj/.rvm/" (20142 56018) "wrappers/" "VERSION" "usr/" "user/" "tmp/" "src/" "scripts/" "rubies/" "README" "patchsets/" "patches/" "man/" "log/" "LICENCE" "lib/" "hooks/" "help/" "gemsets/" "gems/" "examples/" "environments/" "contrib/" "config/" "bin/" "archives/" "../" "./")
+
+ ("/usr/local/Library/Homebrew/" (20231 31775) "vendor/" "utils.rb" "test/" "tab.rb" "LICENSE" "keg_fix_install_names.rb" "keg.rb" "hardware.rb" "global.rb" "formula_installer.rb" "formula.rb" "extend/" "exceptions.rb" "download_strategy.rb" "compat/" "cmd/" "cleaner.rb" "build.rb" "blacklist.rb" "../" "./")
+
+ ("/usr/local/Library/" (20231 31775) "LinkedKegs/" "Homebrew/" "Formula/" "Contributions/" "Aliases/" "../" "./")
+
+ ("/usr/local/Cellar/" (20231 32050) "zsh/" "wget/" "watch/" "rsync/" "redis/" "readline/" "pstree/" "psgrep/" "proctools/" "pkg-config/" "pidof/" "pcre/" "node/" "nginx/" "mysql/" "memtester/" "macvim/" "little-cms/" "libtiff/" "libiconv/" "jpeg/" "jasper/" "imagemagick/" "htop/" "graphviz/" "git/" "gems/" "gdbm/" "emacs/" "ctags/" "csshx/" "cmake/" ".DS_Store" "../" "./")
+
+ ("/usr/local/" (20231 31775) "var/" "share/" "sbin/" "README.md" "Library/" "lib/" "include/" "hermes/" "etc/" "data/" "Cellar/" "bin/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/usr/" (20007 53247) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "llvm-gcc-4.2/" "libexec/" "lib/" "include/" "etc/" "bin/" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/javascripts/" (20077 37460) "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/app/views/topics/changes/" (20174 37658) "index.rss.builder" "index.html.haml" "dispute.html.haml" "_unlink.rss.haml" "_unlink.html.haml" "_undeprecate.rss.haml" "_undeprecate.html.haml" "_title.rss.haml" "_title.html.haml" "_restore_reply.rss.haml" "_restore_reply.html.haml" "_restore.rss.haml" "_restore.html.haml" "_remove_reply.rss.haml" "_remove_reply.html.haml" "_remove.rss.haml" "_remove.html.haml" "_move.rss.haml" "_move.html.haml" "_merge.rss.haml" "_merge.html.haml" "_link.rss.haml" "_link.html.haml" "_deprecate.rss.haml" "_deprecate.html.haml" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/script/db/geck_sql_dump_files/" (20231 20871) "sfn_triggers.sql" "sfn_struct.sql" "sfn_routines.sql" "sfn_constants_and_migrations.sql" "../" "./")
+
+ ("/Users/pbiegaj/projects/satisfaction/spec/models/ssl/certs/" (20230 7945) "4.crt" "3.crt" "2.crt" "1.crt" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
