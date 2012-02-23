@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-ruby starter-kit-js solarized-theme flymake flymake-ruby)
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-ruby starter-kit-js flymake flymake-ruby)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

@@ -14,8 +14,8 @@
 ;; 4 Macs
 (setq mac-command-modifier 'meta)
 
-(add-to-list 'load-path "~/.emacs.d/elpa/solarized-theme-0.2")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/solarized-theme-0.2")
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 
 (push "/usr/local/bin" exec-path)
