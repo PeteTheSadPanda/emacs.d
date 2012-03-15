@@ -4,6 +4,9 @@
 ;;;; line numbers on the left in a gui
 (global-linum-mode 1)
 
+;; auto update of modified files from the filesystem, mostly for
+;; sharing two different editors on the same machine
+(global-auto-revert-mode t)
 ;; don't iconify on C-z when running in X
 ;; or exit emacs (!) when running in Emacs.app
 (when window-system (global-unset-key "\C-z"))
@@ -82,6 +85,9 @@
   (define-key *spiffy-ruby-keymap* key func))
 
 (global-set-key [(f5)] 'spiffy-tm-grep-project)
+(global-set-key [(f6)] 'next-error)
+(global-set-key [(shift f6)] 'previous-error)
+(global-set-key "\C-x\C-b" 'buffer-menu)
 
 (defun spiffy-find-interesting-files (directory interesting-p)
   (if (not (file-directory-p directory))
