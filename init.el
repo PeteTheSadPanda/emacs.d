@@ -9,7 +9,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-ruby starter-kit-js flymake flymake-ruby rainbow-mode bm)
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-ruby starter-kit-js flymake flymake-ruby rainbow-mode bm ruby-compilation highline)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -32,5 +32,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(flymake-errline ((((class color)) (:background "#ffffd7"))))
- '(flymake-warnline ((((class color)) (:background "#0a2832")))))
+ ;; persistent bookmark colors
+ '(bm-fringe-persistent-face ((t (:background "orange1" :foreground "Black"))))
+ '(bm-persistent-face ((t (:background "orange1" :foreground "black"))))
+ '(flymake-errline ((((class color)) (:background "#ffffd7"))) t)
+ '(flymake-warnline ((((class color)) (:background "#0a2832"))) t))

@@ -4,6 +4,48 @@
 ;;;; line numbers on the left in a gui
 (global-linum-mode 1)
 
+;; repository should be restored when loading `bm'
+(setq bm-restore-repository-on-load t)
+
+(add-to-list 'load-path "/Users/pbiegaj/.emacs.d/elpa/bm-1.53")
+(require 'bm)
+
+;; key binding
+(global-set-key (kbd "<M-f2>") 'bm-toggle)
+(global-set-key (kbd "<f2>") 'bm-next)
+(global-set-key (kbd "<S-f2>") 'bm-previous)
+
+;; look across all buffers when cycling through bookmarks
+(setq bm-cycle-all-buffers t)
+
+;; highligh mode for bookmarks
+(setq bm-highlight-style 'bm-highlight-line-and-fringe)
+
+;; buffer should be recentered around the bookmark
+(setq bm-recenter t)
+
+;; make bookmarks persistent as default
+(setq-default bm-buffer-persistence t)
+
+;; loading the repository from file when on start up
+(add-hook' after-init-hook 'bm-repository-load)
+
+;; restoring bookmarks when on file find
+(add-hook 'find-file-hooks 'bm-buffer-restore)
+
+;; saving bookmark data on killing a buffer
+(add-hook 'kill-buffer-hook 'bm-buffer-save);
+
+;; saving the repository to file when on exit
+;; `kill-buffer-hook' is not called when emacs is killed, so we
+;; must save all bookmarks first
+(add-hook 'kill-emacs-hook '(lambda nil
+                             (bm-buffer-save-all)
+                             (bm-repository-save)))
+
+;; update bookmark repository when saving the file
+(add-hook 'after-save-hook 'bm-buffer-save)
+
 ;; auto update of modified files from the filesystem, mostly for
 ;; sharing two different editors on the same machine
 (global-auto-revert-mode t)
