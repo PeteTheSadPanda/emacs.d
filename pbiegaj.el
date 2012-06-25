@@ -10,10 +10,17 @@
 (add-to-list 'load-path "/Users/pbiegaj/.emacs.d/elpa/bm-1.53")
 (require 'bm)
 
+;; window switch shortcuts
+(global-set-key "\M-N" 'next-multiframe-window)
+(global-set-key "\M-P" 'previous-multiframe-window)
+
 ;; key binding
 (global-set-key (kbd "<M-f2>") 'bm-toggle)
 (global-set-key (kbd "<f2>") 'bm-next)
 (global-set-key (kbd "<S-f2>") 'bm-previous)
+
+;; disable visual bell
+(setq visible-bell nil)
 
 ;; look across all buffers when cycling through bookmarks
 (setq bm-cycle-all-buffers t)
@@ -59,9 +66,9 @@
 ;; 4 Macs
 (setq mac-command-modifier 'meta)
 
-(add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
-(load-theme 'solarized-dark t)
+;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+;; (load-theme 'solarized-dark t)
 
 (push "/usr/local/bin" exec-path)
 ;; no more backup files emacs, I got it
