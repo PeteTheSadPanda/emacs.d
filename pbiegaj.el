@@ -1,6 +1,9 @@
 (require 'grep)
 (require 'ansi-color)
 
+;;;; set line hl-line-mode to true
+(hl-line-mode t)
+
 ;;;; line numbers on the left in a gui
 (global-linum-mode 1)
 
@@ -68,7 +71,6 @@
 
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
-;; (load-theme 'solarized-dark t)
 
 (push "/usr/local/bin" exec-path)
 ;; no more backup files emacs, I got it
@@ -118,7 +120,7 @@
            (s (substring string start end)))
       (set-text-properties 0
                            (length s)
-                           (substitute 'font-lock-face 'face (text-properties-at 0 s))
+                           (set-face-attribute 'font-lock-face 'face)
                            s)
       (concat s (font-lock-proof string end))))))
 
