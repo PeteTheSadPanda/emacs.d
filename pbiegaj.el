@@ -22,6 +22,9 @@
 (global-set-key (kbd "<f2>") 'bm-next)
 (global-set-key (kbd "<S-f2>") 'bm-previous)
 
+;; fullscreen on F3
+(global-set-key "\M-F" 'ns-toggle-fullscreen)
+
 ;; disable visual bell
 (setq visible-bell nil)
 
