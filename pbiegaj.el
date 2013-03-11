@@ -72,6 +72,11 @@
 ;; 4 Macs
 (setq mac-command-modifier 'meta)
 
+;; add js3-mode to load path
+(setq load-path (cons "/Users/pbiegaj/.emacs.d/non-elpa-libs/js3-mode" load-path))
+(autoload 'js3-mode "js3" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+;; (add-to-list 'load-path "/Users/pbiegaj/.emacs.d/non-elpa-libs/js3-mode")
 ;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 
