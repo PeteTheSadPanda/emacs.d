@@ -22,7 +22,10 @@
 (global-set-key (kbd "<f2>") 'bm-next)
 (global-set-key (kbd "<S-f2>") 'bm-previous)
 
-;; fullscreen on F3
+;; cleanup whitespace in a file
+(global-set-key (kbd "\C-x w c") 'whitespace-cleanup)
+
+;; fullscreen on Meta-Shift-f
 (global-set-key "\M-F" 'ns-toggle-fullscreen)
 
 ;; disable visual bell
@@ -48,6 +51,13 @@
 
 ;; saving bookmark data on killing a buffer
 (add-hook 'kill-buffer-hook 'bm-buffer-save);
+
+;;(require 'alpha)
+;; Set transparency of emacs
+(defun transparency (value)
+ "Sets the transparency of the frame window. 0=transparent/100=opaque"
+ (interactive "nTransparency Value 0 - 100 opaque:")
+ (set-frame-parameter (selected-frame) 'alpha value))
 
 ;; saving the repository to file when on exit
 ;; `kill-buffer-hook' is not called when emacs is killed, so we
