@@ -50,7 +50,7 @@
 (add-hook 'find-file-hooks 'bm-buffer-restore)
 
 ;; saving bookmark data on killing a buffer
-(add-hook 'kill-buffer-hook 'bm-buffer-save);
+(add-hook 'kill-buffer-hook 'bm-buffer-save)
 
 ;;(require 'alpha)
 ;; Set transparency of emacs
@@ -86,15 +86,13 @@
 (setq load-path (cons "/Users/pbiegaj/.emacs.d/non-elpa-libs/js3-mode" load-path))
 (autoload 'js3-mode "js3" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
-;; (add-to-list 'load-path "/Users/pbiegaj/.emacs.d/non-elpa-libs/js3-mode")
-;; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 
 (push "/usr/local/bin" exec-path)
 ;; no more backup files emacs, I got it
 (setq make-backup-files nil)
 ;; set font type and size
 (set-default-font "Monaco-9")
+
 ;; Take all the windows in the current frame and shift them over one.
 ;; ;;
 ;; ;; With 2 windows, effectively switches their positions.
@@ -107,27 +105,18 @@
              (window-list)
              (append (cdr buffers) (list (car buffers))))))
 
-;; load flymake-ruby mode for files flagged for ruby-mode
 (custom-set-faces
  '(flymake-errline ((((class color)) (:background "#ffffd7"))))
  '(flymake-warnline ((((class color)) (:background "#0a2832")))))
 
+;; load flymake-ruby mode for files flagged for ruby-mode
 (eval-after-load 'ruby-mode
   '(progn
-     (add-hook 'ruby-mode-hook 'flymake-ruby-load)
+     (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
      (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
 
-
-;;;; spiffy-mode provides a few utilities
-;; (add-to-list 'load-path "~/.emacs.d/vendor/spiffy")
-;; (setq spiffy-enable-minor-mode t)
-;; (require 'spiffy)
-
-;;;; spiffy-textmate-mode has some good stuff, but I don't want the
-;;;; full minor mode since it stomps all over a bunch of default keybindings
-;; (require 'spiffy-textmate-mode)
 
 ;;;; color spec output
 (defun font-lock-proof (string start)
@@ -238,9 +227,13 @@
    (compile (setq spiffy-ruby-last-test-command
                   ;; don't shell-escape "bundle exec spec"; it doesn't help
                   (concat (spiffy-ruby-maybe-bundled-command (buffer-file-name)
-                                                              "spec"
-                                                              (apply 'spiffy-make-shell-command
-                                                                     (append spec-args (list specfile)))))))))
+                                                             (spiffy-detect-rspec-binary)
+                                                             (apply 'spiffy-make-shell-command
+                                                                    (append spec-args (list specfile)))))))))
+
+(defun spiffy-detect-rspec-binary ()
+  (defvar cmd "bundle exec gem list | grep '^rspec ' | grep '(2'")
+  (if (eql (call-process-shell-command cmd) 0) "rspec" "spec"))
 
 (defun spiffy-ruby-maybe-bundled-command (filename program &optional args)
   (let ((bundle-root (spiffy-ruby-bundle-root-for filename))
@@ -265,3 +258,91 @@
 
 (defun spiffy-make-shell-command (&rest parts)
   (mapconcat 'shell-quote-argument parts " "))
+
+
+ ;; (defun tmr-spork-shell ()
+ ;;      "Invoke spork shell" ; Spork - love that name
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "spork")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "spork\n"))
+
+ ;;    (defun tmr-devlog-shell ()
+ ;;      "Tail the development log, shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "devlog")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "tail -f log/development.log\n"))
+
+ ;;    (defun tmr-testlog-shell ()
+ ;;      "Tail the test log, shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "testlog")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "tail -f log/test.log\n"))
+
+ ;;    (defun tmr-server-shell ()
+ ;;      "Invoke rails ui server shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "server")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "rails s\n"))
+
+ ;;    (defun tmr-db-shell ()
+ ;;      "Invoke rails dbconsole shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "dbconsole")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "rails dbconsole\n"))
+
+ ;;    (defun tmr-console-shell ()
+ ;;      "Invoke rails console shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "console")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "rails console\n"))
+
+ ;;    ; I like to run all my tests in the same shell
+ ;;    (defun tmr-rspec-shell ()
+ ;;      "Invoke rspec shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "rspec")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
+ ;;      (process-send-string nil "rspec spec\n")) ; This is debatable, since spork wont be up yet
+
+ ;;    ; The shell where I do most of my work
+ ;;    (defun tmr-shell ()
+ ;;      "Invoke plain old shell"
+ ;;      (interactive)
+ ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "sh")))
+ ;;      (shell (current-buffer))
+ ;;      (process-send-string nil "cd .\n")); makes sure rvm variables set with .rvmrc
+
+ ;;    ; My everyday ide
+ ;;    (defun tmr-ide-lite ()
+ ;;      "Spawn several shells for a mini Rails IDE"
+ ;;      (interactive)
+ ;;      (progn (tmr-spork-shell)
+ ;;             (tmr-shell)
+ ;;             (tmr-server-shell)
+ ;;             (tmr-rspec-shell)))
+
+ ;;    ; When I am doing a big debug session
+ ;;    (defun tmr-ide-full ()
+ ;;      "Spawn several shells for a full Rails IDE"
+ ;;      (interactive)
+ ;;      (progn (tmr-spork-shell)
+ ;;             (tmr-shell)
+ ;;             (tmr-server-shell)
+ ;;             (tmr-console-shell)
+ ;;             (tmr-db-shell)
+ ;;             (tmr-devlog-shell)
+ ;;             (tmr-testlog-shell)
+ ;;             (tmr-rspec-shell)))
