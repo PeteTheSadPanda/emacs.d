@@ -18,6 +18,7 @@
 (global-set-key "\M-P" 'previous-multiframe-window)
 
 ;; key binding
+(global-set-key (kbd "\C-x l") 'bm-show-all)
 (global-set-key (kbd "<M-f2>") 'bm-toggle)
 (global-set-key (kbd "<f2>") 'bm-next)
 (global-set-key (kbd "<S-f2>") 'bm-previous)
