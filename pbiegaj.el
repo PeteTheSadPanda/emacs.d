@@ -46,6 +46,7 @@
 ;; require packages that we want but only after all the paths have
 ;; been loaded via the package...package
 (add-hook 'after-init-hook '(lambda ()
+                              (load-theme 'solarized-dark t)
                               (require 'bm)
                               (require 'grep)
                               (require 'ansi-color)))
