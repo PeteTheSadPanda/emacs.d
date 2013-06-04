@@ -60,6 +60,8 @@
  (interactive "nTransparency Value 0 - 100 opaque:")
  (set-frame-parameter (selected-frame) 'alpha value))
 
+(transparency 98)
+
 ;; saving the repository to file when on exit
 ;; `kill-buffer-hook' is not called when emacs is killed, so we
 ;; must save all bookmarks first
