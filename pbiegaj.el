@@ -1,76 +1,20 @@
-(require 'grep)
-(require 'ansi-color)
-
 ;;;; set line hl-line-mode to true
 (hl-line-mode t)
 
 ;;;; line numbers on the left in a gui
-(global-linum-mode 1)
+(global-linum-mode t)
 
-;; repository should be restored when loading `bm'
-(setq bm-restore-repository-on-load t)
+;; set default directory to be starting from the projects root
+(setq default-directory "~/projects")
 
-(add-to-list 'load-path "/Users/pbiegaj/.emacs.d/elpa/bm-1.53")
-(require 'bm)
+;; add brew binaries to the exec-path
+(push "/usr/local/bin" exec-path)
 
-;; window switch shortcuts
-(global-set-key "\M-N" 'next-multiframe-window)
-(global-set-key "\M-P" 'previous-multiframe-window)
+;; no more backup files emacs, I got it
+(setq make-backup-files nil)
 
-;; key binding
-(global-set-key (kbd "\C-x l") 'bm-show-all)
-(global-set-key (kbd "<M-f2>") 'bm-toggle)
-(global-set-key (kbd "<f2>") 'bm-next)
-(global-set-key (kbd "<S-f2>") 'bm-previous)
-
-;; cleanup whitespace in a file
-(global-set-key (kbd "\C-x w c") 'whitespace-cleanup)
-
-;; fullscreen on Meta-Shift-f
-(global-set-key "\M-F" 'ns-toggle-fullscreen)
-
-;; disable visual bell
-(setq visible-bell nil)
-
-;; look across all buffers when cycling through bookmarks
-(setq bm-cycle-all-buffers t)
-
-;; highligh mode for bookmarks
-(setq bm-highlight-style 'bm-highlight-line-and-fringe)
-
-;; buffer should be recentered around the bookmark
-(setq bm-recenter t)
-
-;; make bookmarks persistent as default
-(setq-default bm-buffer-persistence t)
-
-;; loading the repository from file when on start up
-(add-hook' after-init-hook 'bm-repository-load)
-
-;; restoring bookmarks when on file find
-(add-hook 'find-file-hooks 'bm-buffer-restore)
-
-;; saving bookmark data on killing a buffer
-(add-hook 'kill-buffer-hook 'bm-buffer-save)
-
-;;(require 'alpha)
-;; Set transparency of emacs
-(defun transparency (value)
- "Sets the transparency of the frame window. 0=transparent/100=opaque"
- (interactive "nTransparency Value 0 - 100 opaque:")
- (set-frame-parameter (selected-frame) 'alpha value))
-
-(transparency 98)
-
-;; saving the repository to file when on exit
-;; `kill-buffer-hook' is not called when emacs is killed, so we
-;; must save all bookmarks first
-(add-hook 'kill-emacs-hook '(lambda nil
-                             (bm-buffer-save-all)
-                             (bm-repository-save)))
-
-;; update bookmark repository when saving the file
-(add-hook 'after-save-hook 'bm-buffer-save)
+;; set font type and size
+(set-default-font "Monaco-9")
 
 ;; auto update of modified files from the filesystem, mostly for
 ;; sharing two different editors on the same machine
@@ -79,22 +23,88 @@
 ;; or exit emacs (!) when running in Emacs.app
 (when window-system (global-unset-key "\C-z"))
 
+;; C-k will kill the whole line
 (setq kill-whole-line t)
+
+;; In case I fat finger exit, prompt me first
 (setq confirm-kill-emacs 'yes-or-no-p)
 
-;; 4 Macs
+;; set cmd key to meta
 (setq mac-command-modifier 'meta)
+;; fullscreen on Meta-Shift-f
+(global-set-key "\M-F" 'ns-toggle-fullscreen)
+
+;; transparency stuffs
+(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque:")
+  (set-frame-parameter (selected-frame) 'alpha value))
+
+;; just a little transparency plz
+(transparency 98)
+
+;; require packages that we want but only after all the paths have
+;; been loaded via the package...package
+(add-hook 'after-init-hook '(lambda ()
+                              (require 'bm)
+                              (require 'grep)
+                              (require 'ansi-color)))
+
+;; repository should be restored when loading `bm'
+(setq bm-restore-repository-on-load t)
+(eval-after-load 'bm
+  '(progn
+     ;; window switch shortcuts
+     (global-set-key "\M-N" 'next-multiframe-window)
+     (global-set-key "\M-P" 'previous-multiframe-window)
+
+     ;; key binding
+     (global-set-key (kbd "\C-x l") 'bm-show-all)
+     (global-set-key (kbd "<M-f2>") 'bm-toggle)
+     (global-set-key (kbd "<f2>") 'bm-next)
+     (global-set-key (kbd "<S-f2>") 'bm-previous)
+
+     ;; cleanup whitespace in a file
+     (global-set-key (kbd "\C-x w c") 'whitespace-cleanup)
+
+     ;; disable visual bell
+     (setq visible-bell nil)
+
+     ;; look across all buffers when cycling through bookmarks
+     (setq bm-cycle-all-buffers t)
+
+     ;; highligh mode for bookmarks
+     (setq bm-highlight-style 'bm-highlight-line-and-fringe)
+
+     ;; buffer should be recentered around the bookmark
+     (setq bm-recenter t)
+
+     ;; make bookmarks persistent as default
+     (setq-default bm-buffer-persistence t)
+
+     ;; loading the repository from file when on start up
+     (add-hook' after-init-hook 'bm-repository-load)
+
+     ;; restoring bookmarks when on file find
+     (add-hook 'find-file-hooks 'bm-buffer-restore)
+
+     ;; saving bookmark data on killing a buffer
+     (add-hook 'kill-buffer-hook 'bm-buffer-save)
+
+     ;; saving the repository to file when on exit
+     ;; `kill-buffer-hook' is not called when emacs is killed, so we
+     ;; must save all bookmarks first
+     (add-hook 'kill-emacs-hook '(lambda nil
+                                   (bm-buffer-save-all)
+                                   (bm-repository-save)))
+
+     ;; update bookmark repository when saving the file
+     (add-hook 'after-save-hook 'bm-buffer-save)))
 
 ;; add js3-mode to load path
-(setq load-path (cons "/Users/pbiegaj/.emacs.d/non-elpa-libs/js3-mode" load-path))
+(add-to-list 'load-path "~/.emacs.d/non-elpa-libs/js3-mode")
 (autoload 'js3-mode "js3" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
-
-(push "/usr/local/bin" exec-path)
-;; no more backup files emacs, I got it
-(setq make-backup-files nil)
-;; set font type and size
-(set-default-font "Monaco-9")
 
 ;; Take all the windows in the current frame and shift them over one.
 ;; ;;
