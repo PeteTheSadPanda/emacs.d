@@ -84,7 +84,7 @@
      (setq-default bm-buffer-persistence t)
 
      ;; loading the repository from file when on start up
-     (add-hook' after-init-hook 'bm-repository-load)
+     (add-hook 'after-init-hook 'bm-repository-load)
 
      ;; restoring bookmarks when on file find
      (add-hook 'find-file-hooks 'bm-buffer-restore)
