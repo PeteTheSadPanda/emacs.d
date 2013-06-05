@@ -12,7 +12,43 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-ruby js2-mode flymake flymake-ruby rainbow-mode bm ruby-compilation highline centered-cursor-mode)
+(defvar my-packages '(bm
+                      butler
+                      centered-cursor-mode
+                      cl-lib
+                      coffee-mode
+                      elisp-slime-nav
+                      find-file-in-project
+                      flymake
+                      flymake-easy
+                      flymake-haml
+                      flymake-jshint
+                      flymake-jslint
+                      flymake-ruby
+                      flyspell-lazy
+                      haml-mode
+                      highline
+                      idle-highlight
+                      idle-highlight-mode
+                      ido-ubiquitous
+                      inf-ruby
+                      jenkins-watch
+                      magit
+                      mv-shell
+                      paredit
+                      pivotal-tracker
+                      rainbow-mode
+                      ruby-compilation
+                      ruby-mode
+                      rvm
+                      smex
+                      solarized-theme
+                      starter-kit
+                      starter-kit-lisp
+                      starter-kit-ruby
+                      web
+                      ws-trim
+                      yaml-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
