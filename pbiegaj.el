@@ -43,6 +43,22 @@
 ;; just a little transparency plz
 (transparency 98)
 
+(setq rvm-two-step (lambda ()
+                      (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
+
+;; window switch shortcuts
+(global-set-key "\M-N" '(lambda ()
+                          (interactive)
+                          (next-multiframe-window)
+                          (if (eql major-mode 'ruby-mode) (rvm-two-step))))
+
+(global-set-key "\M-P" '(lambda ()
+                          (interactive)
+                          (previous-multiframe-window)
+                          (if (eql major-mode 'ruby-mode) (rvm-two-step))))
+
+
+
 ;; require packages that we want but only after all the paths have
 ;; been loaded via the package...package
 (add-hook 'after-init-hook '(lambda ()
@@ -55,10 +71,6 @@
 (setq bm-restore-repository-on-load t)
 (eval-after-load 'bm
   '(progn
-     ;; window switch shortcuts
-     (global-set-key "\M-N" 'next-multiframe-window)
-     (global-set-key "\M-P" 'previous-multiframe-window)
-
      ;; key binding
      (global-set-key (kbd "\C-x l") 'bm-show-all)
      (global-set-key (kbd "<M-f2>") 'bm-toggle)
@@ -126,7 +138,7 @@
 ;; load flymake-ruby mode for files flagged for ruby-mode
 (eval-after-load 'ruby-mode
   '(progn
-     (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
+     (add-hook 'ruby-mode-hook '(lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
      (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
