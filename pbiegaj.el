@@ -43,8 +43,10 @@
 ;; just a little transparency plz
 (transparency 98)
 
-(setq rvm-two-step (lambda ()
-                      (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
+(defun rvm-two-step ()
+  (rvm-activate-corresponding-ruby)
+  (flymake-ruby-load))
+
 
 ;; window switch shortcuts
 (global-set-key "\M-N" '(lambda ()
