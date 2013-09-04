@@ -143,7 +143,8 @@
      (add-hook 'ruby-mode-hook '(lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
-     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
+     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)
+     (add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))))
 
 
 ;;;; color spec output
