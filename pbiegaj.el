@@ -1,3 +1,6 @@
+;;;; new fullscreen emulating old fullscreen in Emacs 24.3
+(setq ns-use-native-fullscreen nil)
+
 ;;;; set line hl-line-mode to true
 (hl-line-mode t)
 
@@ -32,7 +35,7 @@
 ;; set cmd key to meta
 (setq mac-command-modifier 'meta)
 ;; fullscreen on Meta-Shift-f
-(global-set-key "\M-F" 'ns-toggle-fullscreen)
+(global-set-key "\M-F" 'toggle-frame-fullscreen)
 
 ;; transparency stuffs
 (defun transparency (value)
