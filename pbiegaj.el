@@ -74,6 +74,7 @@
                               (load-theme 'solarized-dark t)
                               (require 'bm)
                               (require 'grep)
+                              (require 'scratch-persist)
                               (require 'ansi-color)))
 
 ;; repository should be restored when loading `bm'
