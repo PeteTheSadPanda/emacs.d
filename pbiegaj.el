@@ -1,6 +1,9 @@
 ;;;; new fullscreen emulating old fullscreen in Emacs 24.3
 (setq ns-use-native-fullscreen nil)
 
+;;;; set column width to 80 unless someone sets higher in a mode
+(setq-default fill-column 80)
+
 ;;;; set line hl-line-mode to true
 (hl-line-mode t)
 
@@ -8,6 +11,7 @@
 (global-linum-mode t)
 
 ;; set default directory to be starting from the projects root
+
 (setq default-directory "~/projects")
 
 ;; add brew binaries to the exec-path
@@ -140,14 +144,16 @@
  '(flymake-errline ((((class color)) (:background "#ffffd7"))))
  '(flymake-warnline ((((class color)) (:background "#0a2832")))))
 
+;; add rabl files to auto set ruby major mode
+(add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
+
 ;; load flymake-ruby mode for files flagged for ruby-mode
 (eval-after-load 'ruby-mode
   '(progn
      (add-hook 'ruby-mode-hook '(lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
-     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)
-     (add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))))
+     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
 
 
 ;;;; color spec output
