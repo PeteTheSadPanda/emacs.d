@@ -6,4 +6,5 @@ url/cookies
 .smex-items
 places
 emacs-visited-files
+scratch.el
 *~
