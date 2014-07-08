@@ -1,8 +1,11 @@
+;;;; set srgb
+;;(setq ns-use-srgb-colorspace t)
+
 ;;;; new fullscreen emulating old fullscreen in Emacs 24.3
 (setq ns-use-native-fullscreen nil)
 
 ;;;; set column width to 80 unless someone sets higher in a mode
-(setq-default fill-column 80)
+(setq-default fill-column 120)
 
 ;;;; set line hl-line-mode to true
 (hl-line-mode t)
