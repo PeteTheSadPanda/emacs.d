@@ -85,3 +85,4 @@
  '(flymake-warnline ((((class color)) (:background "#0a2832"))) t)
  '(grep-context-face ((t (:foreground "#839496"))) t))
 (put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)

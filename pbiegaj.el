@@ -13,6 +13,7 @@
 ;;;; line numbers on the left in a gui
 (global-linum-mode t)
 
+
 ;; set default directory to be starting from the projects root
 
 (setq default-directory "~/projects")
