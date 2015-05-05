@@ -1,5 +1,5 @@
 ;;;; set srgb
-;;(setq ns-use-srgb-colorspace t)
+(setq ns-use-srgb-colorspace t)
 
 ;;;; new fullscreen emulating old fullscreen in Emacs 24.3
 (setq ns-use-native-fullscreen nil)
@@ -75,7 +75,6 @@
 ;; require packages that we want but only after all the paths have
 ;; been loaded via the package...package
 (add-hook 'after-init-hook '(lambda ()
-                              (load-theme 'solarized-dark t)
                               (require 'bm)
                               (require 'grep)
                               (require 'scratch-persist)
