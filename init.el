@@ -14,7 +14,8 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(bm
+(defvar my-packages '(ansi-color
+                      bm
                       centered-cursor-mode
                       cl-lib
                       coffee-mode
@@ -42,6 +43,7 @@
                       ruby-compilation
                       ruby-mode
                       rvm
+                      scratch-persist
                       smex
                       solarized-theme
                       starter-kit
@@ -74,6 +76,9 @@
     ("target" ".#*" "*.rbc" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.tgz" ".TAGS" "integration_spec_helper.rb")))
  '(grep-find-template "find . <X> -type f <F> | xargs grep <C> -nH -e <R>")
  '(grep-highlight-matches (quote always))
+ '(package-selected-packages
+   (quote
+    (scratch-persist yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))
@@ -84,8 +89,8 @@
  ;; If there is more than one, they won't work right.
  '(bm-fringe-persistent-face ((t (:background "orange1" :foreground "Black"))))
  '(bm-persistent-face ((t (:background "orange1" :foreground "black"))))
- '(flymake-errline ((((class color)) (:background "#ffffd7"))) t)
- '(flymake-warnline ((((class color)) (:background "#0a2832"))) t)
+ '(flymake-errline ((((class color)) (:background "#ffffd7"))))
+ '(flymake-warnline ((((class color)) (:background "#0a2832"))))
  '(grep-context-face ((t (:foreground "#839496"))) t))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)

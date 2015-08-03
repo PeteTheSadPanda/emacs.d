@@ -16,7 +16,7 @@
 
 ;; set default directory to be starting from the projects root
 
-(setq default-directory "~/projects")
+(setq default-directory "~/src")
 
 ;; add brew binaries to the exec-path
 (push "/usr/local/bin" exec-path)
@@ -60,12 +60,12 @@
 
 
 ;; window switch shortcuts
-(global-set-key "\M-N" '(lambda ()
+(global-set-key "\M-N" (lambda ()
                           (interactive)
                           (next-multiframe-window)
                           (if (eql major-mode 'ruby-mode) (rvm-two-step))))
 
-(global-set-key "\M-P" '(lambda ()
+(global-set-key "\M-P" (lambda ()
                           (interactive)
                           (previous-multiframe-window)
                           (if (eql major-mode 'ruby-mode) (rvm-two-step))))
@@ -74,11 +74,15 @@
 
 ;; require packages that we want but only after all the paths have
 ;; been loaded via the package...package
-(add-hook 'after-init-hook '(lambda ()
-                              (require 'bm)
-                              (require 'grep)
-                              (require 'scratch-persist)
-                              (require 'ansi-color)))
+(require 'bm)
+(require 'grep)
+(require 'scratch-persist)
+(require 'ansi-color)
+
+;; (add-hook 'after-init-hook (lambda ()
+;;                              (require 'bm)
+;;                              (require 'scratch-persist)
+;;                              (require 'ansi-color)))
 
 ;; repository should be restored when loading `bm'
 (setq bm-restore-repository-on-load t)
@@ -120,7 +124,7 @@
      ;; saving the repository to file when on exit
      ;; `kill-buffer-hook' is not called when emacs is killed, so we
      ;; must save all bookmarks first
-     (add-hook 'kill-emacs-hook '(lambda nil
+     (add-hook 'kill-emacs-hook (lambda nil
                                    (bm-buffer-save-all)
                                    (bm-repository-save)))
 
@@ -154,7 +158,7 @@
 ;; load flymake-ruby mode for files flagged for ruby-mode
 (eval-after-load 'ruby-mode
   '(progn
-     (add-hook 'ruby-mode-hook '(lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
+     (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
      (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
