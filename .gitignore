@@ -8,3 +8,6 @@ places
 emacs-visited-files
 scratch.el
 *~
+recentf
+ido.last
+bookmarks
