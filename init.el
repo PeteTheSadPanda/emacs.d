@@ -39,6 +39,8 @@
                       mv-shell
                       paredit
                       pivotal-tracker
+                      projectile
+                      projectile-rails
                       rainbow-mode
                       ruby-compilation
                       ruby-mode
@@ -68,17 +70,15 @@
  '(custom-safe-themes
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" "72cc9ae08503b8e977801c6d6ec17043b55313cda34bcf0e6921f2f04cf2da56" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
- '(grep-find-ignored-directories
-   (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" "tmp" "public/assets" "TAGS" "public/javascripts/i18n" "public/widget/demo" "spec/vcr_cassettes" "doc")))
+ '(grep-find-ignored-directories (quote ("coverage" "log" "app/assets/javascripts/vendor")))
  '(grep-find-ignored-files
    (quote
-    ("target" ".#*" "*.rbc" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.dfsl" "*.pfsl" "*.d64fsl" "*.p64fsl" "*.lx64fsl" "*.lx32fsl" "*.dx64fsl" "*.dx32fsl" "*.fx64fsl" "*.fx32fsl" "*.sx64fsl" "*.sx32fsl" "*.wx64fsl" "*.wx32fsl" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.tgz" ".TAGS" "integration_spec_helper.rb")))
+    ("*.class" ".rspec_history" "app/assets/stylesheets/jquery.minicolors.css")))
  '(grep-find-template "find . <X> -type f <F> | xargs grep <C> -nH -e <R>")
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (scratch-persist yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))

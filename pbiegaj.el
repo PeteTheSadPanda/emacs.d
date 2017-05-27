@@ -4,6 +4,9 @@
 ;;;; new fullscreen emulating old fullscreen in Emacs 24.3
 (setq ns-use-native-fullscreen nil)
 
+;; fullscreen on Meta-Shift-f
+(global-set-key "\M-F" 'toggle-frame-fullscreen)
+
 ;;;; set column width to 80 unless someone sets higher in a mode
 (setq-default fill-column 120)
 
@@ -13,9 +16,7 @@
 ;;;; line numbers on the left in a gui
 (global-linum-mode t)
 
-
 ;; set default directory to be starting from the projects root
-
 (setq default-directory "~/src")
 
 ;; add brew binaries to the exec-path
@@ -30,6 +31,7 @@
 ;; auto update of modified files from the filesystem, mostly for
 ;; sharing two different editors on the same machine
 (global-auto-revert-mode t)
+
 ;; don't iconify on C-z when running in X
 ;; or exit emacs (!) when running in Emacs.app
 (when window-system (global-unset-key "\C-z"))
@@ -42,8 +44,6 @@
 
 ;; set cmd key to meta
 (setq mac-command-modifier 'meta)
-;; fullscreen on Meta-Shift-f
-(global-set-key "\M-F" 'toggle-frame-fullscreen)
 
 ;; transparency stuffs
 (defun transparency (value)
@@ -57,7 +57,6 @@
 (defun rvm-two-step ()
   (rvm-activate-corresponding-ruby)
   (flymake-ruby-load))
-
 
 ;; window switch shortcuts
 (global-set-key "\M-N" (lambda ()
@@ -78,11 +77,7 @@
 (require 'grep)
 (require 'scratch-persist)
 (require 'ansi-color)
-
-;; (add-hook 'after-init-hook (lambda ()
-;;                              (require 'bm)
-;;                              (require 'scratch-persist)
-;;                              (require 'ansi-color)))
+(require 'projectile)
 
 ;; repository should be restored when loading `bm'
 (setq bm-restore-repository-on-load t)
@@ -161,7 +156,8 @@
      (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
      (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
      (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
-     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)))
+     (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test)
+     ))
 
 
 ;;;; color spec output
@@ -177,53 +173,53 @@
                            s)
       (concat s (font-lock-proof string end))))))
 
-(defadvice compilation-filter (before ansify-compilation-output activate)
-  (with-current-buffer (process-buffer (ad-get-arg 0))
-    (let ((colorstr (ansi-color-apply (ad-get-arg 1))))
-      (ad-set-arg 1 (font-lock-proof colorstr 0)))))
+;; (defadvice compilation-filter (before ansify-compilation-output activate)
+;;   (with-current-buffer (process-buffer (ad-get-arg 0))
+;;     (let ((colorstr (ansi-color-apply (ad-get-arg 1))))
+;;       (ad-set-arg 1 (font-lock-proof colorstr 0)))))
 
 
 
-(defvar *spiffy-ruby-keymap* (make-sparse-keymap) "Keybindings go in here")
-(defun spiffy-ruby-define-key (key func)
-  (define-key *spiffy-ruby-keymap* key func))
+;; (defvar *spiffy-ruby-keymap* (make-sparse-keymap) "Keybindings go in here")
+;; (defun spiffy-ruby-define-key (key func)
+;;   (define-key *spiffy-ruby-keymap* key func))
 
-(global-set-key [(f5)] 'spiffy-tm-grep-project)
+(global-set-key [(f5)] 'projectile-grep)
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key "\C-x\C-b" 'buffer-menu)
 
-(defun spiffy-find-interesting-files (directory interesting-p)
-  (if (not (file-directory-p directory))
-      (filter interesting-p (list directory))
-    (append (filter interesting-p (list directory))
-            (reduce 'append
-                    (mapcar (lambda (dir) (spiffy-find-interesting-files dir interesting-p))
-                            (filter interesting-p
-                                    (mapcar (lambda (filename) (concat (file-name-as-directory directory) filename))
-                                            (spiffy-useful-directory-files directory))))))))
-(defun spiffy-parent-directory (filename)
-  (file-name-as-directory (expand-file-name (concat(file-name-as-directory filename) ".."))))
+;; (defun spiffy-find-interesting-files (directory interesting-p)
+;;   (if (not (file-directory-p directory))
+;;       (filter interesting-p (list directory))
+;;     (append (filter interesting-p (list directory))
+;;             (reduce 'append
+;;                     (mapcar (lambda (dir) (spiffy-find-interesting-files dir interesting-p))
+;;                             (filter interesting-p
+;;                                     (mapcar (lambda (filename) (concat (file-name-as-directory directory) filename))
+;;                                             (spiffy-useful-directory-files directory))))))))
+;; (defun spiffy-parent-directory (filename)
+;;   (file-name-as-directory (expand-file-name (concat(file-name-as-directory filename) ".."))))
 
-(defun spiffy-tm-grep-project (regexp)
-  "Search all the files in the current project for the specified string/regex."
-  (interactive
-   (list (grep-read-regexp)))
-  (grep-compute-defaults)      ; rgrep only does this when called interactively
-  (rgrep regexp "*" (spiffy-tm-project-root-for (buffer-file-name))))
+;; (defun spiffy-tm-grep-project (regexp)
+;;   "Search all the files in the current project for the specified string/regex."
+;;   (interactive
+;;    (list (grep-read-regexp)))
+;;   (grep-compute-defaults)      ; rgrep only does this when called interactively
+;;   (rgrep regexp "*" (spiffy-tm-project-root-for (buffer-file-name))))
 
-(defun spiffy-tm-is-project-root (directory)
-  (file-exists-p (concat (file-name-as-directory directory) ".git")))
+;; (defun spiffy-tm-is-project-root (directory)
+;;   (file-exists-p (concat (file-name-as-directory directory) ".git")))
 
-(defun spiffy-tm-project-root-for (filename)
-  (if (null filename)
-      nil
-    (let ((as-dir (file-name-as-directory filename)))
-      (if (string= (file-truename as-dir) (file-truename (spiffy-parent-directory as-dir)))
-          nil    ; base case
-        (if (spiffy-tm-is-project-root as-dir)
-            as-dir
-          (spiffy-tm-project-root-for (spiffy-parent-directory filename)))))))
+;; (defun spiffy-tm-project-root-for (filename)
+;;   (if (null filename)
+;;       nil
+;;     (let ((as-dir (file-name-as-directory filename)))
+;;       (if (string= (file-truename as-dir) (file-truename (spiffy-parent-directory as-dir)))
+;;           nil    ; base case
+;;         (if (spiffy-tm-is-project-root as-dir)
+;;             as-dir
+;;           (spiffy-tm-project-root-for (spiffy-parent-directory filename)))))))
 
 (defun spiffy-local-file-name ()
   (if (and (boundp 'tramp-file-name-regexp)
