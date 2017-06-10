@@ -45,6 +45,7 @@
                       ruby-compilation
                       ruby-mode
                       rvm
+                      save-visited-files
                       scratch-persist
                       smex
                       solarized-theme

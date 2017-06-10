@@ -70,15 +70,6 @@
                           (if (eql major-mode 'ruby-mode) (rvm-two-step))))
 
 
-
-;; require packages that we want but only after all the paths have
-;; been loaded via the package...package
-(require 'bm)
-(require 'grep)
-(require 'scratch-persist)
-(require 'ansi-color)
-(require 'projectile)
-
 ;; repository should be restored when loading `bm'
 (setq bm-restore-repository-on-load t)
 (eval-after-load 'bm
@@ -173,53 +164,10 @@
                            s)
       (concat s (font-lock-proof string end))))))
 
-;; (defadvice compilation-filter (before ansify-compilation-output activate)
-;;   (with-current-buffer (process-buffer (ad-get-arg 0))
-;;     (let ((colorstr (ansi-color-apply (ad-get-arg 1))))
-;;       (ad-set-arg 1 (font-lock-proof colorstr 0)))))
-
-
-
-;; (defvar *spiffy-ruby-keymap* (make-sparse-keymap) "Keybindings go in here")
-;; (defun spiffy-ruby-define-key (key func)
-;;   (define-key *spiffy-ruby-keymap* key func))
-
 (global-set-key [(f5)] 'projectile-grep)
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key "\C-x\C-b" 'buffer-menu)
-
-;; (defun spiffy-find-interesting-files (directory interesting-p)
-;;   (if (not (file-directory-p directory))
-;;       (filter interesting-p (list directory))
-;;     (append (filter interesting-p (list directory))
-;;             (reduce 'append
-;;                     (mapcar (lambda (dir) (spiffy-find-interesting-files dir interesting-p))
-;;                             (filter interesting-p
-;;                                     (mapcar (lambda (filename) (concat (file-name-as-directory directory) filename))
-;;                                             (spiffy-useful-directory-files directory))))))))
-;; (defun spiffy-parent-directory (filename)
-;;   (file-name-as-directory (expand-file-name (concat(file-name-as-directory filename) ".."))))
-
-;; (defun spiffy-tm-grep-project (regexp)
-;;   "Search all the files in the current project for the specified string/regex."
-;;   (interactive
-;;    (list (grep-read-regexp)))
-;;   (grep-compute-defaults)      ; rgrep only does this when called interactively
-;;   (rgrep regexp "*" (spiffy-tm-project-root-for (buffer-file-name))))
-
-;; (defun spiffy-tm-is-project-root (directory)
-;;   (file-exists-p (concat (file-name-as-directory directory) ".git")))
-
-;; (defun spiffy-tm-project-root-for (filename)
-;;   (if (null filename)
-;;       nil
-;;     (let ((as-dir (file-name-as-directory filename)))
-;;       (if (string= (file-truename as-dir) (file-truename (spiffy-parent-directory as-dir)))
-;;           nil    ; base case
-;;         (if (spiffy-tm-is-project-root as-dir)
-;;             as-dir
-;;           (spiffy-tm-project-root-for (spiffy-parent-directory filename)))))))
 
 (defun spiffy-local-file-name ()
   (if (and (boundp 'tramp-file-name-regexp)
@@ -300,91 +248,3 @@
 
 (defun spiffy-make-shell-command (&rest parts)
   (mapconcat 'shell-quote-argument parts " "))
-
-
- ;; (defun tmr-spork-shell ()
- ;;      "Invoke spork shell" ; Spork - love that name
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "spork")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "spork\n"))
-
- ;;    (defun tmr-devlog-shell ()
- ;;      "Tail the development log, shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "devlog")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "tail -f log/development.log\n"))
-
- ;;    (defun tmr-testlog-shell ()
- ;;      "Tail the test log, shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "testlog")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "tail -f log/test.log\n"))
-
- ;;    (defun tmr-server-shell ()
- ;;      "Invoke rails ui server shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "server")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "rails s\n"))
-
- ;;    (defun tmr-db-shell ()
- ;;      "Invoke rails dbconsole shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "dbconsole")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "rails dbconsole\n"))
-
- ;;    (defun tmr-console-shell ()
- ;;      "Invoke rails console shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "console")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "rails console\n"))
-
- ;;    ; I like to run all my tests in the same shell
- ;;    (defun tmr-rspec-shell ()
- ;;      "Invoke rspec shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "rspec")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n"); makes sure rvm variables set with .rvmrc
- ;;      (process-send-string nil "rspec spec\n")) ; This is debatable, since spork wont be up yet
-
- ;;    ; The shell where I do most of my work
- ;;    (defun tmr-shell ()
- ;;      "Invoke plain old shell"
- ;;      (interactive)
- ;;      (pop-to-buffer (get-buffer-create (generate-new-buffer-name "sh")))
- ;;      (shell (current-buffer))
- ;;      (process-send-string nil "cd .\n")); makes sure rvm variables set with .rvmrc
-
- ;;    ; My everyday ide
- ;;    (defun tmr-ide-lite ()
- ;;      "Spawn several shells for a mini Rails IDE"
- ;;      (interactive)
- ;;      (progn (tmr-spork-shell)
- ;;             (tmr-shell)
- ;;             (tmr-server-shell)
- ;;             (tmr-rspec-shell)))
-
- ;;    ; When I am doing a big debug session
- ;;    (defun tmr-ide-full ()
- ;;      "Spawn several shells for a full Rails IDE"
- ;;      (interactive)
- ;;      (progn (tmr-spork-shell)
- ;;             (tmr-shell)
- ;;             (tmr-server-shell)
- ;;             (tmr-console-shell)
- ;;             (tmr-db-shell)
- ;;             (tmr-devlog-shell)
- ;;             (tmr-testlog-shell)
- ;;             (tmr-rspec-shell)))
