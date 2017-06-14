@@ -54,6 +54,7 @@
                       starter-kit
                       starter-kit-lisp
                       starter-kit-ruby
+                      use-package
                       web
                       ws-trim
                       yaml-mode)
@@ -81,7 +82,7 @@
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))
@@ -164,20 +165,14 @@
 ;; just a little transparency plz
 (transparency 98)
 
-(defun rvm-two-step ()
-  (rvm-activate-corresponding-ruby)
-  (flymake-ruby-load))
-
 ;; window switch shortcuts
 (global-set-key "\M-N" (lambda ()
                           (interactive)
-                          (next-multiframe-window)
-                          (if (eql major-mode 'ruby-mode) (rvm-two-step))))
+                          (next-multiframe-window)))
 
 (global-set-key "\M-P" (lambda ()
                           (interactive)
-                          (previous-multiframe-window)
-                          (if (eql major-mode 'ruby-mode) (rvm-two-step))))
+                          (previous-multiframe-window)))
 
 
 (use-package bm
@@ -231,8 +226,7 @@
         ("\C-x l" . bm-show-all)
         ("M-<f2>" . bm-toggle)
         ("<f2>" . bm-next)
-        ("S-<f2>" . bm-previous))
-  )
+        ("S-<f2>" . bm-previous)))
 
 
 ;; ;; RUBY STUFF
@@ -241,7 +235,7 @@
   :demand t
 
   :config
-  (add-hook 'ruby-mode-hook (lambda () (rvm-activate-corresponding-ruby) (flymake-ruby-load)))
+  (add-hook 'ruby-mode-hook #'flymake-ruby-load)
   (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
   (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
   (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test))
