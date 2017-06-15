@@ -22,13 +22,13 @@
                       cl-lib
                       coffee-mode
                       elisp-slime-nav
+                      enh-ruby-mode
                       find-file-in-project
                       flymake
                       flymake-easy
                       flymake-haml
                       flymake-jshint
                       flymake-jslint
-                      flymake-ruby
                       flyspell-lazy
                       haml-mode
                       highline
@@ -44,8 +44,6 @@
                       projectile
                       projectile-rails
                       rainbow-mode
-                      ruby-compilation
-                      ruby-mode
                       rvm
                       save-visited-files
                       scratch-persist
@@ -82,7 +80,7 @@
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm ruby-compilation rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-ruby flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (inf-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))
@@ -91,6 +89,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(erm-syn-warnline ((t (:underline (:style wave :color "orange")))))
+ '(erm-syn-errline ((t (:underline (:style wave :color "red")))))
  '(bm-fringe-persistent-face ((t (:background "orange1" :foreground "Black"))))
  '(bm-persistent-face ((t (:background "orange1" :foreground "black"))))
  '(flymake-errline ((((class color)) (:background "#ffffd7"))))
@@ -110,7 +110,7 @@
 (setq ns-use-native-fullscreen nil)
 
 ;; fullscreen on Meta-Shift-f
-(global-set-key "\M-F" 'toggle-frame-fullscreen)
+(global-set-key (kbd "M-F") 'toggle-frame-fullscreen)
 
 ;;;; set column width to 80 unless someone sets higher in a mode
 (setq-default fill-column 120)
@@ -119,7 +119,7 @@
 (hl-line-mode t)
 
 ;; cleanup whitespace in a file
-(global-set-key (kbd "\C-x w c") 'whitespace-cleanup)
+(global-set-key (kbd "C-x w c") 'whitespace-cleanup)
 
 ;; disable visual bell
 (setq visible-bell nil)
@@ -166,13 +166,13 @@
 (transparency 98)
 
 ;; window switch shortcuts
-(global-set-key "\M-N" (lambda ()
-                          (interactive)
-                          (next-multiframe-window)))
+(global-set-key (kbd "M-N") (lambda ()
+                            (interactive)
+                            (next-multiframe-window)))
 
-(global-set-key "\M-P" (lambda ()
-                          (interactive)
-                          (previous-multiframe-window)))
+(global-set-key (kbd "M-P") (lambda ()
+                            (interactive)
+                            (previous-multiframe-window)))
 
 
 (use-package bm
@@ -222,23 +222,45 @@
   ;; buffer should be recentered around the bookmark
   (setq bm-recenter t)
 
-  :bind (
-        ("\C-x l" . bm-show-all)
-        ("M-<f2>" . bm-toggle)
-        ("<f2>" . bm-next)
-        ("S-<f2>" . bm-previous)))
-
+  :bind (("\C-x l" . bm-show-all)
+         ("M-<f2>" . bm-toggle)
+         ("<f2>" . bm-next)
+         ("S-<f2>" . bm-previous)))
 
 ;; ;; RUBY STUFF
-(use-package ruby-mode
+(use-package enh-ruby-mode
   :ensure t
-  :demand t
+  :defer t
 
-  :config
-  (add-hook 'ruby-mode-hook #'flymake-ruby-load)
-  (define-key ruby-mode-map [(meta r)] 'spiffy-ruby-run-spec-file)
-  (define-key ruby-mode-map [(meta R)] 'spiffy-ruby-run-spec-under-point)
-  (define-key ruby-mode-map [(control ?\;) ?r ?t] 'spiffy-ruby-rerun-last-test))
+  :mode (("\\.rb\\'" . enh-ruby-mode)
+         ("\\.ru\\'" . enh-ruby-mode)
+         ("\\.gemspec\\'" . enh-ruby-mode)
+         ("Rakefile\\'" . enh-ruby-mode)
+         ("Gemfile\\'" . enh-ruby-mode)
+         ("Capfile\\'" . enh-ruby-mode)
+         ("Guardfile\\'" . enh-ruby-mode)))
+
+(use-package rvm
+  :ensure t
+  :defer t)
+  ;; :init (add-hook 'enh-ruby-mode-hook 'rvm-activate-corresponding-ruby))
+
+(use-package rspec-mode
+  :ensure t
+  :defer t
+
+  :init (add-hook 'enh-ruby-mode-hook 'rspec-mode)
+  :config (setq rspec-use-rvm t)
+
+  :bind (("M-r" . rspec-verify-single)
+         ("M-R" . rspec-verify)
+         ("C-?" . rspec-rerun)))
+
+(use-package rubocop
+  :ensure t
+  :defer t
+
+  :init (add-hook 'enh-ruby-mode-hook #'rubocop-mode))
 
 ;; add js3-mode to load path
 (add-to-list 'load-path "~/.emacs.d/non-elpa-libs/js3-mode")
@@ -257,107 +279,7 @@
              (window-list)
              (append (cdr buffers) (list (car buffers))))))
 
-(custom-set-faces
- '(flymake-errline ((((class color)) (:background "#ffffd7"))))
- '(flymake-warnline ((((class color)) (:background "#0a2832")))))
-
-;; add rabl files to auto set ruby major mode
-(add-to-list 'auto-mode-alist '("\\.rabl$" . ruby-mode))
-
-;;;; color spec output
-(defun font-lock-proof (string start)
-  (cond
-   ((>= start (length string)) "")
-   (t
-    (let* ((end (next-property-change start string (length string)))
-           (s (substring string start end)))
-      (set-text-properties 0
-                           (length s)
-                           (set-face-attribute 'font-lock-face 'face)
-                           s)
-      (concat s (font-lock-proof string end))))))
-
 (global-set-key [(f5)] 'projectile-grep)
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key "\C-x\C-b" 'buffer-menu)
-
-(defun spiffy-local-file-name ()
-  (if (and (boundp 'tramp-file-name-regexp)
-           (eq (string-match tramp-file-name-regexp (buffer-file-name)) 0))
-      (tramp-file-name-localname (tramp-dissect-file-name (buffer-file-name)))
-    (buffer-file-name)))
-
-(defun spiffy-cwd ()
-  ; pwd returns "Directory /where/you/are/"; this gets rid of the baloney
-  (substring (pwd) 10))
-
-(defmacro spiffy-run-in-directory (dir &rest body)
-  "Execute code in a particular current working directory"
-  (let ((retval-var (make-symbol "retval"))
-        (original-dir-var (make-symbol "original-dir")))
-    `(let ((,original-dir-var (spiffy-cwd)))
-       (unless (null ,dir) (cd ,dir))
-       (setq ,retval-var (funcall (lambda () ,@body)))
-       (cd ,original-dir-var)
-       ,retval-var)))
-
-(defun spiffy-ruby-rerun-last-test ()
-  (interactive)
-  (save-buffer)
-  (spiffy-run-in-directory
-   spiffy-ruby-last-test-dir
-   (compile spiffy-ruby-last-test-command)))
-
-(defun spiffy-ruby-run-spec-under-point ()
-  (interactive)
-  (spiffy-ruby-run-spec
-   (spiffy-local-file-name)
-   "-c"
-   "-fs"
-   "--backtrace"
-   "-l"
-   (format "%d" (line-number-at-pos)))) ; defaults to line number at point
-
-(defun spiffy-ruby-run-spec-file ()
-  (interactive)
-  (spiffy-ruby-run-spec (spiffy-local-file-name) "-c" "-fs"))
-
-(defun spiffy-ruby-run-spec (specfile &rest spec-args)
-  (save-buffer)
-  (spiffy-run-in-directory
-   (setq spiffy-ruby-last-test-dir (spiffy-ruby-bundle-root-for specfile))
-   (compile (setq spiffy-ruby-last-test-command
-                  ;; don't shell-escape "bundle exec spec"; it doesn't help
-                  (concat (spiffy-ruby-maybe-bundled-command (buffer-file-name)
-                                                             (spiffy-detect-rspec-binary)
-                                                             (apply 'spiffy-make-shell-command
-                                                                    (append spec-args (list specfile)))))))))
-
-(defun spiffy-detect-rspec-binary ()
-  (defvar cmd "bundle exec gem list | grep '^rspec ' | grep '(2'")
-  (if (eql (call-process-shell-command cmd) 0) "rspec" "spec"))
-
-(defun spiffy-ruby-maybe-bundled-command (filename program &optional args)
-  (let ((bundle-root (spiffy-ruby-bundle-root-for filename))
-        (space-and-args (if args
-                            (concat " " args)
-                          "")))
-    (if bundle-root
-        (concat "bash -l -c 'cd "
-                bundle-root
-                " && bundle exec "
-                program
-                space-and-args
-                "'")
-      (concat program
-              space-and-args))))
-
-(defun spiffy-ruby-bundle-root-for (filename)
-  (let ((root (locate-dominating-file filename "Gemfile")))
-    (if root
-        (expand-file-name root)
-      root)))
-
-(defun spiffy-make-shell-command (&rest parts)
-  (mapconcat 'shell-quote-argument parts " "))
