@@ -17,12 +17,10 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages '(ansi-color
-                      bm
                       centered-cursor-mode
                       cl-lib
                       coffee-mode
                       elisp-slime-nav
-                      enh-ruby-mode
                       find-file-in-project
                       flymake
                       flymake-easy
@@ -30,21 +28,17 @@
                       flymake-jshint
                       flymake-jslint
                       flyspell-lazy
-                      haml-mode
                       highline
                       idle-highlight
                       idle-highlight-mode
                       ido-ubiquitous
                       inf-ruby
-                      jenkins-watch
                       magit
                       mv-shell
                       paredit
-                      pivotal-tracker
                       projectile
                       projectile-rails
                       rainbow-mode
-                      rvm
                       save-visited-files
                       scratch-persist
                       smex
@@ -53,7 +47,6 @@
                       starter-kit-lisp
                       starter-kit-ruby
                       use-package
-                      web
                       ws-trim
                       yaml-mode)
   "A list of packages to ensure are installed at launch.")
@@ -80,7 +73,7 @@
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (inf-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))
@@ -89,10 +82,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(erm-syn-warnline ((t (:underline (:style wave :color "orange")))))
- '(erm-syn-errline ((t (:underline (:style wave :color "red")))))
  '(bm-fringe-persistent-face ((t (:background "orange1" :foreground "Black"))))
  '(bm-persistent-face ((t (:background "orange1" :foreground "black"))))
+ '(erm-syn-errline ((t (:underline (:style wave :color "red")))))
+ '(erm-syn-warnline ((t (:underline (:style wave :color "orange")))))
  '(flymake-errline ((((class color)) (:background "#ffffd7"))))
  '(flymake-warnline ((((class color)) (:background "#0a2832"))))
  '(grep-context-face ((t (:foreground "#839496"))) t))
@@ -145,7 +138,7 @@
 
 ;; don't iconify on C-z when running in X
 ;; or exit emacs (!) when running in Emacs.app
-(when window-system (global-unset-key "\C-z"))
+(when window-system (global-unset-key (kbd "C-z")))
 
 ;; C-k will kill the whole line
 (setq kill-whole-line t)
