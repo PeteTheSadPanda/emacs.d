@@ -245,8 +245,8 @@
   :init (add-hook 'enh-ruby-mode-hook 'rspec-mode)
   :config (setq rspec-use-rvm t)
 
-  :bind (("M-r" . rspec-verify-single)
-         ("M-R" . rspec-verify)
+  :bind (("M-R" . rspec-verify-single)
+         ("M-r" . rspec-verify)
          ("C-?" . rspec-rerun)))
 
 (use-package rubocop
