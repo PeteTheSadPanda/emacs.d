@@ -73,7 +73,7 @@
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16))
@@ -168,6 +168,14 @@
                             (previous-multiframe-window)))
 
 
+(use-package web-mode
+  :ensure t
+  :demand t
+
+  :mode (("\\.js\\'" . web-mode)
+         ("\\.html\\'" . web-mode))
+  )
+
 (use-package bm
   :ensure t
   :demand t
@@ -254,11 +262,6 @@
   :defer t
 
   :init (add-hook 'enh-ruby-mode-hook #'rubocop-mode))
-
-;; add js3-mode to load path
-(add-to-list 'load-path "~/.emacs.d/non-elpa-libs/js3-mode")
-(autoload 'js3-mode "js3" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
 
 ;; Take all the windows in the current frame and shift them over one.
 ;; ;;
