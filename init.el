@@ -76,7 +76,8 @@
     (web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
- '(solarized-termcolors 16))
+ '(solarized-termcolors 16)
+ '(web-mode-code-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -173,6 +174,7 @@
   :demand t
 
   :mode (("\\.js\\'" . web-mode)
+         ("\\.json\\'" . web-mode)
          ("\\.html\\'" . web-mode))
   )
 
