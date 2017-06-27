@@ -115,6 +115,10 @@
 ;; cleanup whitespace in a file
 (global-set-key (kbd "C-x w c") 'whitespace-cleanup)
 
+(setq-default show-trailing-whitespace t)
+;; make the machine do the work to save me miles on finger strain
+(add-hook 'before-save-hook #'whitespace-cleanup)
+
 ;; disable visual bell
 (setq visible-bell nil)
 
@@ -281,3 +285,4 @@
 (global-set-key [(f6)] 'next-error)
 (global-set-key [(shift f6)] 'previous-error)
 (global-set-key "\C-x\C-b" 'buffer-menu)
+(put 'set-goal-column 'disabled nil)
