@@ -65,15 +65,15 @@
  '(custom-safe-themes
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" "72cc9ae08503b8e977801c6d6ec17043b55313cda34bcf0e6921f2f04cf2da56" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" default)))
- '(grep-find-ignored-directories (quote ("coverage" "log" "app/assets/javascripts/vendor")))
- '(grep-find-ignored-files
-   (quote
-    ("*.class" ".rspec_history" "app/assets/stylesheets/jquery.minicolors.css")))
+ '(grep-find-ignored-directories nil)
+ '(grep-find-ignored-files nil)
  '(grep-find-template "find . <X> -type f <F> | xargs grep <C> -nH -e <R>")
  '(grep-highlight-matches (quote always))
  '(package-selected-packages
    (quote
-    (web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+    (rjsx-mode web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+ '(projectile-globally-ignored-directories (quote ("!.git" "!log")))
+ '(projectile-globally-ignored-files (quote ("TAGS" ".rspec_history" ".byebug_history")))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
  '(solarized-termcolors 16)
@@ -173,13 +173,19 @@
                             (previous-multiframe-window)))
 
 
-(use-package web-mode
+(use-package rjsx-mode
   :ensure t
   :demand t
 
   :mode (("\\.js\\'" . web-mode)
-         ("\\.json\\'" . web-mode)
-         ("\\.html\\'" . web-mode))
+         ("\\.json\\'" . web-mode))
+  )
+
+(use-package web-mode
+  :ensure t
+  :demand t
+
+  :mode (("\\.html\\'" . web-mode))
   )
 
 (use-package bm
