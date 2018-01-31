@@ -69,10 +69,11 @@
  '(grep-find-ignored-files nil)
  '(grep-find-template "find . <X> -type f <F> | xargs grep <C> -nH -e <R>")
  '(grep-highlight-matches (quote always))
+ '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (rjsx-mode web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
- '(projectile-globally-ignored-directories (quote ("!.git" "!log")))
+    (eruby-mode hideshow-org hideshowvis swift-mode rjsx-mode web-mode js3-mode ruby-compilation flymake-ruby enh-ruby-mode rspec-mode bug-hunter use-package flycheck-swift3 swift3-mode transpose-frame rubocop python-mode php-mode save-visited-files scratch-persist immortal-scratch clojure-mode projectile projectile-rails yaml-mode ws-trim web starter-kit-ruby starter-kit-lisp solarized-theme rvm rainbow-mode pivotal-tracker mv-shell jenkins-watch idle-highlight highline haml-mode flyspell-lazy flymake-jslint flymake-jshint flymake-haml coffee-mode centered-cursor-mode bm)))
+ '(projectile-globally-ignored-directories (quote (".git" "log" "public/assets" "tmp")))
  '(projectile-globally-ignored-files (quote ("TAGS" ".rspec_history" ".byebug_history")))
  '(save-visited-files-mode t)
  '(solarized-broken-srgb t)
@@ -89,7 +90,10 @@
  '(erm-syn-warnline ((t (:underline (:style wave :color "orange")))))
  '(flymake-errline ((((class color)) (:background "#ffffd7"))))
  '(flymake-warnline ((((class color)) (:background "#0a2832"))))
- '(grep-context-face ((t (:foreground "#839496"))) t))
+ '(grep-context-face ((t (:foreground "#839496"))) t)
+ '(smerge-base ((t (:background "LightGoldenrod2"))))
+ '(smerge-mine ((t (:background "dark red"))))
+ '(smerge-refined-added ((t (:inherit smerge-refined-change :background "dark green")))))
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
@@ -148,6 +152,12 @@
 ;; C-k will kill the whole line
 (setq kill-whole-line t)
 
+;; Don't jump to the beginning of a line when moving down to the next line
+(setq line-move-visual t)
+
+;; less typey typey
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; In case I fat finger exit, prompt me first
 (setq confirm-kill-emacs 'yes-or-no-p)
 
@@ -177,8 +187,9 @@
   :ensure t
   :demand t
 
-  :mode (("\\.js\\'" . web-mode)
-         ("\\.json\\'" . web-mode))
+  :mode (("\\.js\\'" . rjsx-mode)
+         ("\\.json\\'" . rjsx-mode)
+         ("\\.jsx\\'" . rjsx-mode))
   )
 
 (use-package web-mode
@@ -245,6 +256,8 @@
   :ensure t
   :defer t
 
+  (setq enh-ruby-deep-indent-paren nil)
+
   :mode (("\\.rb\\'" . enh-ruby-mode)
          ("\\.ru\\'" . enh-ruby-mode)
          ("\\.gemspec\\'" . enh-ruby-mode)
@@ -253,16 +266,24 @@
          ("Capfile\\'" . enh-ruby-mode)
          ("Guardfile\\'" . enh-ruby-mode)))
 
+(use-package eruby-mode
+  :ensure t
+  :defer t
+
+  :mode (("\\.erb\\'" . eruby-mode)))
+
 (use-package rvm
   :ensure t
   :defer t)
-  ;; :init (add-hook 'enh-ruby-mode-hook 'rvm-activate-corresponding-ruby))
 
 (use-package rspec-mode
   :ensure t
   :defer t
 
-  :init (add-hook 'enh-ruby-mode-hook 'rspec-mode)
+  :init
+  (add-hook 'enh-ruby-mode-hook 'rspec-mode)
+  (add-hook 'enh-ruby-mode-hook 'hs-minor-mode)
+
   :config (setq rspec-use-rvm t)
 
   :bind (("M-R" . rspec-verify-single)
@@ -274,6 +295,17 @@
   :defer t
 
   :init (add-hook 'enh-ruby-mode-hook #'rubocop-mode))
+
+(use-package hideshow
+  :ensure t
+  :bind ("C-c h" . hs-toggle-hiding)
+  :config
+  '(add-to-list 'hs-special-modes-alist
+                `(enh-ruby-mode
+                  ,(rx (or "def" "class" "it" "describe" "context" "module" "do" "{" "[")) ; Block start
+                  ,(rx (or "}" "]" "end"))                       ; Block end
+                  ,(rx (or "#" "=begin"))                        ; Comment start
+		  ruby-forward-sexp nil)))
 
 ;; Take all the windows in the current frame and shift them over one.
 ;; ;;
