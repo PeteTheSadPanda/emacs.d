@@ -148,7 +148,7 @@
 (setq make-backup-files nil)
 
 ;; set font type and size
-(set-frame-font "Monaco-10")
+(set-frame-font "Monaco-9")
 
 ;; auto update of modified files from the filesystem, mostly for
 ;; sharing two different editors on the same machine
